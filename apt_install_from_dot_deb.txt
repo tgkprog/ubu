@@ -9,9 +9,9 @@
  
  
  
- sudo apt update
- #does not change Ubuntu version, just gets latest OS bug fixes and installed software fixes
- sudo apt upgrade -y
+ sudo apt update # does not change Ubuntu version, just gets latest OS bug fixes and installed software fixes
+ 
+ sudo apt upgrade -y # updates packages but not Ubuntu version, only installed drivers and software installed via apt
  
  
  
