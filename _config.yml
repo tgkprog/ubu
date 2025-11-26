@@ -1,3 +1,26 @@
 theme: jekyll-theme-cayman
 title: Ubuntu Scripts Collection
 description: Utility scripts and configurations for Ubuntu systems
+
+# Include all files and directories (except those starting with .)
+include:
+  - "*.txt"
+  - "*.md"
+  - "*.sh"
+  - "js"
+  - "media"
+  - "misc"
+  - "ntwrkng"
+  - "otherSoftware"
+  - "secure"
+  - "shell"
+  - "sysProcessesPause"
+
+# Exclude files that shouldn't be published
+exclude:
+  - ".git"
+  - ".github"
+  - "__pycache__"
+  - ".profile additions"
+  - ".bashrc"
+  - ".updtme"
