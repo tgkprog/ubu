@@ -7,6 +7,7 @@ CONF = "/etc/dnsmasq.d/lan.conf"
 HELP_TEXT = """
 Usage:
   script.py <domain> <action>
+  script.py l|L  (list all domains)
 
 Params:
   <domain>  The DNS domain, e.g. myapi.lan
@@ -14,6 +15,7 @@ Params:
             a = add if missing
             c = comment if present and not commented
             d = delete if present
+            l/L = list all configured domains
 
 All operations print clear errors and short success messages:
   - OK: added
@@ -43,14 +45,65 @@ def save_lines(lines):
         print(f"ERROR: failed to write {CONF} -> {e}")
         sys.exit(1)
 
+def list_domains():
+    lines = load_lines()
+    if not lines:
+        print("No domains configured.")
+        return
+    
+    print("\nConfigured DNS Domains:")
+    print("-" * 60)
+    active = []
+    commented = []
+    
+    for line in lines:
+        line = line.strip()
+        if not line or not "address=/" in line:
+            continue
+        
+        is_commented = line.startswith("#")
+        if is_commented:
+            line = line.lstrip("#").strip()
+        
+        # Parse: address=/domain/ip
+        if line.startswith("address=/"):
+            parts = line.split("/")
+            if len(parts) >= 3:
+                domain = parts[1]
+                ip = parts[2]
+                if is_commented:
+                    commented.append((domain, ip))
+                else:
+                    active.append((domain, ip))
+    
+    if active:
+        print("\nActive Domains:")
+        for domain, ip in active:
+            print(f"  ✓ {domain:<30} -> {ip}")
+    
+    if commented:
+        print("\nCommented Domains:")
+        for domain, ip in commented:
+            print(f"  # {domain:<30} -> {ip}")
+    
+    if not active and not commented:
+        print("No domains found.")
+    
+    print("-" * 60)
+
 def main():
     # Help flags
     if len(sys.argv) == 2 and sys.argv[1].lower() in ("-h", "--help", "/?", "h", "-help", "help"):
         print(HELP_TEXT)
         sys.exit(0)
+    
+    # List domains
+    if len(sys.argv) == 2 and sys.argv[1].lower() == "l":
+        list_domains()
+        sys.exit(0)
 
     if len(sys.argv) != 3:
-        print("ERROR: usage: script.py <domain> action(a/c/d)")
+        print("ERROR: usage: script.py <domain> action(a/c/d) OR script.py l")
         sys.exit(1)
 
     domain = sys.argv[1].strip().lower()
