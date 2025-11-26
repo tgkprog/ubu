@@ -1,0 +1,2787 @@
+{
+  "timestamp": "2025-11-02T01:15:45.364617",
+  "system_info": {
+    "cpu_percent": 2.5,
+    "memory_percent": 81.1,
+    "total_processes": 303
+  },
+  "essential_processes": [
+    {
+      "pid": 1,
+      "name": "systemd",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.15394928555266313,
+      "status": "sleeping",
+      "command": "/usr/lib/systemd/systemd --system --deserialize=81 splash"
+    },
+    {
+      "pid": 759,
+      "name": "dbus-daemon",
+      "username": "messagebus",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.07951226836236448,
+      "status": "sleeping",
+      "command": "@dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only"
+    },
+    {
+      "pid": 821,
+      "name": "systemd-logind",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.054400348500580474,
+      "status": "sleeping",
+      "command": "/usr/lib/systemd/systemd-logind"
+    },
+    {
+      "pid": 2022,
+      "name": "systemd",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.12815009209466188,
+      "status": "sleeping",
+      "command": "/usr/lib/systemd/systemd --user --deserialize=25"
+    },
+    {
+      "pid": 2057,
+      "name": "dbus-daemon",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0616960220604251,
+      "status": "sleeping",
+      "command": "/usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only"
+    },
+    {
+      "pid": 2393,
+      "name": "dbus-daemon",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.04906076132996957,
+      "status": "sleeping",
+      "command": "/usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 11 --address=unix:path=/run/user/1000/at-spi/bus_0"
+    },
+    {
+      "pid": 2412,
+      "name": "gcr-ssh-agent",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.06767001562754424,
+      "status": "sleeping",
+      "command": "/usr/libexec/gcr-ssh-agent --base-dir /run/user/1000/gcr"
+    },
+    {
+      "pid": 2477,
+      "name": "gnome-shell",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 2.0307348752228354,
+      "status": "sleeping",
+      "command": "/usr/bin/gnome-shell"
+    },
+    {
+      "pid": 2543,
+      "name": "gnome-shell-calendar-server",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.13026478008302264,
+      "status": "sleeping",
+      "command": "/usr/libexec/gnome-shell-calendar-server"
+    },
+    {
+      "pid": 2602,
+      "name": "gsd-sharing",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.11165552578544799,
+      "status": "sleeping",
+      "command": "/usr/libexec/gsd-sharing"
+    },
+    {
+      "pid": 3086,
+      "name": "gvfsd-trash",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.09812152265993913,
+      "status": "sleeping",
+      "command": "/usr/libexec/gvfsd-trash --spawner :1.25 /org/gtk/gvfs/exec_spaw/0"
+    },
+    {
+      "pid": 3496,
+      "name": "gnome-terminal-server",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.6942520665788366,
+      "status": "sleeping",
+      "command": "/usr/libexec/gnome-terminal-server"
+    },
+    {
+      "pid": 3507,
+      "name": "bash",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.03552675820446072,
+      "status": "sleeping",
+      "command": "bash"
+    },
+    {
+      "pid": 5511,
+      "name": "systemd-journald",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.2097770484453871,
+      "status": "sleeping",
+      "command": "/usr/lib/systemd/systemd-journald"
+    },
+    {
+      "pid": 9921,
+      "name": "systemd-timesyncd",
+      "username": "systemd-timesync",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.07951226836236448,
+      "status": "sleeping",
+      "command": "/usr/lib/systemd/systemd-timesyncd"
+    },
+    {
+      "pid": 10087,
+      "name": "systemd-udevd",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0840588475373401,
+      "status": "sleeping",
+      "command": "/usr/lib/systemd/systemd-udevd"
+    },
+    {
+      "pid": 10359,
+      "name": "systemd-oomd",
+      "username": "systemd-oom",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.07782051797167587,
+      "status": "sleeping",
+      "command": "/usr/lib/systemd/systemd-oomd"
+    },
+    {
+      "pid": 10940,
+      "name": "systemd-resolved",
+      "username": "systemd-resolve",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.09981327305062776,
+      "status": "sleeping",
+      "command": "/usr/lib/systemd/systemd-resolved"
+    },
+    {
+      "pid": 12227,
+      "name": "NetworkManager",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.20020808529805473,
+      "status": "sleeping",
+      "command": "/usr/sbin/NetworkManager --no-daemon"
+    },
+    {
+      "pid": 28755,
+      "name": "bash",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.06090301406478982,
+      "status": "sleeping",
+      "command": "bash"
+    },
+    {
+      "pid": 29911,
+      "name": "chrome_crashpad_handler",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.03552675820446072,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome_crashpad_handler --monitor-self --monitor-self-annotation=ptype=crashpad-handler --database=/home/ubuntu/.config/google-chrome/Crash Reports --metrics-dir=/home/ubuntu/.config/google-chrome --url=https://clients2.google.com/cr/report --annotation=channel= --annotation=lsb-release=Ubuntu 24.04.3 LTS --annotation=plat=Linux --annotation=prod=Chrome_Linux --annotation=ver=142.0.7444.59 --initial-client-fd=5 --shared-client-connection"
+    },
+    {
+      "pid": 29913,
+      "name": "chrome_crashpad_handler",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.03045150703239491,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome_crashpad_handler --no-periodic-tasks --monitor-self-annotation=ptype=crashpad-handler --database=/home/ubuntu/.config/google-chrome/Crash Reports --url=https://clients2.google.com/cr/report --annotation=channel= --annotation=lsb-release=Ubuntu 24.04.3 LTS --annotation=plat=Linux --annotation=prod=Chrome_Linux --annotation=ver=142.0.7444.59 --initial-client-fd=4 --shared-client-connection"
+    },
+    {
+      "pid": 52409,
+      "name": "bash",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.06090301406478982,
+      "status": "sleeping",
+      "command": "bash"
+    },
+    {
+      "pid": 55211,
+      "name": "code",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 1.8921699447854965,
+      "status": "sleeping",
+      "command": "/usr/share/code/code"
+    },
+    {
+      "pid": 55216,
+      "name": "code",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.343425329309787,
+      "status": "sleeping",
+      "command": "/usr/share/code/code --type=zygote --no-zygote-sandbox"
+    },
+    {
+      "pid": 55217,
+      "name": "code",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.37556858673287047,
+      "status": "sleeping",
+      "command": "/usr/share/code/code --type=zygote"
+    },
+    {
+      "pid": 55219,
+      "name": "code",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0832129723419958,
+      "status": "sleeping",
+      "command": "/usr/share/code/code --type=zygote"
+    },
+    {
+      "pid": 55235,
+      "name": "chrome_crashpad_handler",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.1203257465377271,
+      "status": "sleeping",
+      "command": "/usr/share/code/chrome_crashpad_handler --monitor-self-annotation=ptype=crashpad-handler --no-rate-limit --database=/home/ubuntu/.config/Code/Crashpad --url=appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=90da3009-05d4-449e-bac3-2466037226dc&iid=90da3009-05d4-449e-bac3-2466037226dc&sid=90da3009-05d4-449e-bac3-2466037226dc --annotation=_companyName=Microsoft --annotation=_productName=VSCode --annotation=_version=1.105.1 --annotation=lsb-release=Ubuntu 24.04.3 LTS --annotation=plat=Linux --annotation=prod=Electron --annotation=ver=37.6.0 --initial-client-fd=46 --shared-client-connection"
+    },
+    {
+      "pid": 55264,
+      "name": "code",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.5413072578206448,
+      "status": "sleeping",
+      "command": "/proc/self/exe --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-GB --service-sandbox-type=none --crashpad-handler-pid=55235 --enable-crash-reporter=7bb86893-3f7f-4674-a929-fb94b153771d,no_channel --user-data-dir=/home/ubuntu/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,6862771743241887302,11273993744726923585,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,FontationsLinuxSystemFonts,ScreenAIOCREnabled,SpareRendererForSitePerProcess --variations-seed-version"
+    },
+    {
+      "pid": 55309,
+      "name": "code",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 5.025450269939922,
+      "status": "sleeping",
+      "command": "/usr/share/code/code --type=zygote"
+    },
+    {
+      "pid": 55549,
+      "name": "code",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 8.521769655496179,
+      "status": "sleeping",
+      "command": "/proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-GB --service-sandbox-type=none --dns-result-order=ipv4first --experimental-network-inspection --inspect-port=0 --crashpad-handler-pid=55235 --enable-crash-reporter=7bb86893-3f7f-4674-a929-fb94b153771d,no_channel --user-data-dir=/home/ubuntu/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,6862771743241887302,11273993744726923585,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,FontationsLinuxSystemFonts,ScreenAIOCREnabled,SpareRendererForSitePerProcess --variations-seed-version"
+    },
+    {
+      "pid": 55564,
+      "name": "code",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 1.345840302992495,
+      "status": "sleeping",
+      "command": "/proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-GB --service-sandbox-type=none --crashpad-handler-pid=55235 --enable-crash-reporter=7bb86893-3f7f-4674-a929-fb94b153771d,no_channel --user-data-dir=/home/ubuntu/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,6862771743241887302,11273993744726923585,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,FontationsLinuxSystemFonts,ScreenAIOCREnabled,SpareRendererForSitePerProcess --variations-seed-version"
+    },
+    {
+      "pid": 55565,
+      "name": "code",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.8894906351042435,
+      "status": "sleeping",
+      "command": "/proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-GB --service-sandbox-type=none --crashpad-handler-pid=55235 --enable-crash-reporter=7bb86893-3f7f-4674-a929-fb94b153771d,no_channel --user-data-dir=/home/ubuntu/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,6862771743241887302,11273993744726923585,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,FontationsLinuxSystemFonts,ScreenAIOCREnabled,SpareRendererForSitePerProcess --variations-seed-version"
+    },
+    {
+      "pid": 55920,
+      "name": "code",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.8220849554752444,
+      "status": "sleeping",
+      "command": "/usr/share/code/code /usr/share/code/resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=55549"
+    },
+    {
+      "pid": 56066,
+      "name": "code",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 1.1484341792790183,
+      "status": "sleeping",
+      "command": "/usr/share/code/code --max-old-space-size=3072 /usr/share/code/resources/app/extensions/node_modules/typescript/lib/tsserver.js --serverMode partialSemantic --useInferredProjectPerProjectRoot --disableAutomaticTypingAcquisition --cancellationPipeName /tmp/vscode-typescript1000/0d17a59ea8517018bdb7/tscancellation-f0dde285515dc8ef5b6a.tmp* --globalPlugins @vscode/copilot-typescript-server-plugin,@vsintellicode/typescript-intellicode-plugin,ms-vsintellicode-typescript --pluginProbeLocations /home/ubuntu/.vscode/extensions/github.copilot-chat-0.32.4,/home/ubuntu/.vscode/extensions/visualstudioexptteam.vscodeintellicode-1.3.2,/home/ubuntu/.vscode/extensions/visualstudioexptteam.vscodeintellicode-1.3.2 --locale en --noGetErrOnBackgroundUpdate --canUseWatchEvents --validateDefaultNpmLocation --useNodeIpc"
+    },
+    {
+      "pid": 56067,
+      "name": "code",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 2.7212862378220404,
+      "status": "sleeping",
+      "command": "/usr/share/code/code --max-old-space-size=3072 /usr/share/code/resources/app/extensions/node_modules/typescript/lib/tsserver.js --useInferredProjectPerProjectRoot --enableTelemetry --cancellationPipeName /tmp/vscode-typescript1000/0d17a59ea8517018bdb7/tscancellation-66bcb5ddf8da389e808b.tmp* --globalPlugins @vscode/copilot-typescript-server-plugin,@vsintellicode/typescript-intellicode-plugin,ms-vsintellicode-typescript --pluginProbeLocations /home/ubuntu/.vscode/extensions/github.copilot-chat-0.32.4,/home/ubuntu/.vscode/extensions/visualstudioexptteam.vscodeintellicode-1.3.2,/home/ubuntu/.vscode/extensions/visualstudioexptteam.vscodeintellicode-1.3.2 --locale en --noGetErrOnBackgroundUpdate --canUseWatchEvents --validateDefaultNpmLocation --useNodeIpc"
+    },
+    {
+      "pid": 56086,
+      "name": "code",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.7626622230023071,
+      "status": "sleeping",
+      "command": "/usr/share/code/code /usr/share/code/resources/app/extensions/node_modules/typescript/lib/typingsInstaller.js --globalTypingsCacheLocation /home/ubuntu/.cache/typescript/5.9 --enableTelemetry --typesMapLocation /usr/share/code/resources/app/extensions/node_modules/typescript/lib/typesMap.json --validateDefaultNpmLocation"
+    },
+    {
+      "pid": 56095,
+      "name": "code",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 2.9548006589367772,
+      "status": "sleeping",
+      "command": "/usr/share/code/code /home/ubuntu/.vscode/extensions/visualstudioexptteam.intellicode-api-usage-examples-0.2.9/dist/server/server.js --node-ipc --clientProcessId=55549"
+    },
+    {
+      "pid": 56228,
+      "name": "code",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.8308609106269415,
+      "status": "sleeping",
+      "command": "/proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-GB --service-sandbox-type=none --crashpad-handler-pid=55235 --enable-crash-reporter=7bb86893-3f7f-4674-a929-fb94b153771d,no_channel --user-data-dir=/home/ubuntu/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,6862771743241887302,11273993744726923585,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,FontationsLinuxSystemFonts,ScreenAIOCREnabled,SpareRendererForSitePerProcess --variations-seed-version"
+    },
+    {
+      "pid": 58023,
+      "name": "code",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.8913409870940593,
+      "status": "sleeping",
+      "command": "/usr/share/code/code --type=zygote --no-zygote-sandbox"
+    },
+    {
+      "pid": 66366,
+      "name": "bash",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.09124878669776668,
+      "status": "sleeping",
+      "command": "/usr/bin/bash --init-file /usr/share/code/resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh"
+    },
+    {
+      "pid": 71358,
+      "name": "dbus",
+      "username": "lp",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.08966277070649611,
+      "status": "sleeping",
+      "command": "/usr/lib/cups/notifier/dbus dbus:// "
+    },
+    {
+      "pid": 71359,
+      "name": "dbus",
+      "username": "lp",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.09304627148787332,
+      "status": "sleeping",
+      "command": "/usr/lib/cups/notifier/dbus dbus:// "
+    },
+    {
+      "pid": 75031,
+      "name": "bash",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.1233920441208502,
+      "status": "sleeping",
+      "command": "/usr/bin/bash --init-file /usr/share/code/resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh"
+    },
+    {
+      "pid": 75207,
+      "name": "python",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.6089244062484801,
+      "status": "sleeping",
+      "command": "/bin/python /home/ubuntu/.vscode/extensions/ms-python.autopep8-2025.2.0/bundled/tool/lsp_server.py"
+    },
+    {
+      "pid": 75216,
+      "name": "code",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 8.544449684171349,
+      "status": "sleeping",
+      "command": "/usr/share/code/code /home/ubuntu/.vscode/extensions/ms-python.vscode-pylance-2025.9.1/dist/server.bundle.js --cancellationReceive=file:6837093148a65873fc5ee12faf89475b0b25fb43f0 --node-ipc --clientProcessId=55549"
+    },
+    {
+      "pid": 75366,
+      "name": "code",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 1.0711952005041416,
+      "status": "sleeping",
+      "command": "/usr/share/code/code /usr/share/code/resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=55549"
+    },
+    {
+      "pid": 75873,
+      "name": "bash",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.12688127930164544,
+      "status": "sleeping",
+      "command": "bash"
+    },
+    {
+      "pid": 76569,
+      "name": "kworker/u8:1-flush-8:0",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 79097,
+      "name": "step1.sh",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.04906076132996957,
+      "status": "sleeping",
+      "command": "/bin/bash ./step1.sh"
+    },
+    {
+      "pid": 79100,
+      "name": "python",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.18947604375712385,
+      "status": "running",
+      "command": "python /home/ubuntu/code/mngo/sysLoad/report.py"
+    }
+  ],
+  "pausable_processes": [
+    {
+      "pid": 29901,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 5.186007955456212,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome"
+    },
+    {
+      "pid": 29919,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.36541808438873885,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=zygote --no-zygote-sandbox --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --change-stack-guard-on-fork=enable"
+    },
+    {
+      "pid": 29920,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.4229375976721515,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=zygote --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --change-stack-guard-on-fork=enable"
+    },
+    {
+      "pid": 29922,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.11662504255809576,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=zygote --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --change-stack-guard-on-fork=enable"
+    },
+    {
+      "pid": 29947,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 1.7642841886893796,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=gpu-process --ozone-platform=x11 --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --change-stack-guard-on-fork=enable --gpu-preferences=UAAAAAAAAAAgAAAEAAAAAAAAAAAAAGAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAABgAAAAAAAAAAQAAAAAAAAAIAAAAAAAAAAgAAAAAAAAA --shared-files --metrics-shmem-handle=4,i,13695659636048739053,5487450342885338691,262144 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190708988185955192"
+    },
+    {
+      "pid": 29949,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 1.4768980910711529,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-GB --service-sandbox-type=none --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --change-stack-guard-on-fork=enable --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,3016549257865583681,12196083615945741370,524288 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190708989122997041"
+    },
+    {
+      "pid": 29962,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.6775460314707866,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=utility --utility-sub-type=storage.mojom.StorageService --lang=en-GB --service-sandbox-type=utility --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --change-stack-guard-on-fork=enable --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,12549812269131536323,10392780690430405163,524288 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190708990060038890"
+    },
+    {
+      "pid": 30045,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 1.407166254654957,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=7 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=5515313929 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,4316306765686816612,9175348711641276954,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190708992871164437"
+    },
+    {
+      "pid": 30299,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.6343535293085182,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=utility --utility-sub-type=audio.mojom.AudioService --lang=en-GB --service-sandbox-type=none --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --change-stack-guard-on-fork=enable --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,1261178906138483642,18129679019855403114,524288 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709008800875870"
+    },
+    {
+      "pid": 30467,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 1.4290004081347818,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=31 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=5655359921 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,8029526513509339424,3478593111464565855,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709015360168813"
+    },
+    {
+      "pid": 30519,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 3.9689521509548875,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=36 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=5664961136 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,16419938789631480925,14192311778734027812,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709020045378058"
+    },
+    {
+      "pid": 31019,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 3.754945726532779,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=85 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=5761745305 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,3209146206101853803,579662540016800379,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709065960428659"
+    },
+    {
+      "pid": 31191,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 1.9357853845454371,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=98 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=5789893671 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,17993140965612802415,1601279157226678853,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709078141972696"
+    },
+    {
+      "pid": 31227,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 3.3485555623695507,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=102 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=5799093111 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,5652069954514934724,4653588811761382639,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709081890140092"
+    },
+    {
+      "pid": 31385,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 1.2712446842030691,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=113 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=5818037279 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,17533542883133834933,18382713007727719162,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709092197600431"
+    },
+    {
+      "pid": 31391,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 1.3224201335213994,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=114 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=5818075982 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,10769934437372335497,7158894924910354892,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709093134642280"
+    },
+    {
+      "pid": 31433,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 2.319706988832333,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=118 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=5819231245 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,2960015826819531207,1596763393331708380,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709096882809676"
+    },
+    {
+      "pid": 31472,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 3.520849766221243,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=121 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=5824067259 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,12431756893953347380,13452339030409103248,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709099693935223"
+    },
+    {
+      "pid": 33043,
+      "name": "nautilus",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 1.3805740532013204,
+      "status": "sleeping",
+      "command": "/usr/bin/nautilus --gapplication-service"
+    },
+    {
+      "pid": 46964,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 2.220052317380832,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=381 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=14271995559 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,16806585816075037251,15134295246037961715,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709343324815963"
+    },
+    {
+      "pid": 48613,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 2.560940021104586,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=493 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=14807703266 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,15698145263314528350,13936359261466955156,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709448273503051"
+    },
+    {
+      "pid": 50194,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 2.2317359685165252,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=533 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=15806441737 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,13705676685326476565,10691644975592656055,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709485755177011"
+    },
+    {
+      "pid": 50416,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 1.856537452181618,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=540 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=15954953305 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,465334576468258163,2561516942866652013,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709492314469954"
+    },
+    {
+      "pid": 51586,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 1.4991023149489409,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=546 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=16105144100 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,6343960657864292076,3716821610814412819,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709497936721048"
+    },
+    {
+      "pid": 64363,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 2.499138264644743,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=747 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=22710433560 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,9667696991567081535,6553315140363193277,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709686282132697"
+    },
+    {
+      "pid": 64467,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 1.3522372341572864,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=755 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=22739745268 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,13971275835540628369,12312914931115066895,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709693778467489"
+    },
+    {
+      "pid": 64473,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 1.5482159434786193,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=756 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=22739793829 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,8483528187445736351,16237676895204813935,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709694715509338"
+    },
+    {
+      "pid": 65754,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 1.399289041898313,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=785 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=23524306238 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,13307455535847136175,6198401845043139205,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709721889722959"
+    },
+    {
+      "pid": 65796,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 1.7942070237246845,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=788 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=23534016708 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,17388747215834568708,12726068298393212124,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709724700848506"
+    },
+    {
+      "pid": 65814,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 1.6519942565074237,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=790 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=23534348991 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,13555672370226634619,17728272914374694856,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709726574932204"
+    },
+    {
+      "pid": 65825,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 1.6572281092786165,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=791 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=23535246738 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,9420169394731953271,6981001701507684042,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709727511974053"
+    },
+    {
+      "pid": 65834,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 2.4056690555591973,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=792 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=23535350125 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,7532614284093255523,805079454844156478,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709728449015902"
+    },
+    {
+      "pid": 68183,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 4.312747550662638,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=850 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=25098318993 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,14318309178415874308,7473675598587083861,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709782797443144"
+    },
+    {
+      "pid": 69137,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 1.6293142278322545,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=877 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=25700586135 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,11768677886300026175,17353400766785240561,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709808097573067"
+    },
+    {
+      "pid": 69138,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 1.8440607930502895,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=876 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=25700601400 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,2883785894849669715,14057465541111541752,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709807160531218"
+    },
+    {
+      "pid": 69156,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 3.6458806935330728,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=878 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=25701140122 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,5150252192312145564,18108779287697139152,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709809034614916"
+    },
+    {
+      "pid": 69315,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 3.296111300258203,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=880 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=25832708608 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,10303522372575290858,10638897403325785319,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709810908698614"
+    },
+    {
+      "pid": 69436,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 1.7832635133849177,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=891 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=25855075507 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,15848271590479192963,232582288402123524,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709821216158953"
+    },
+    {
+      "pid": 73984,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 1.3144900535650468,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=995 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=29454172530 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,17374016496966414583,10181989061960437778,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709918668511249"
+    },
+    {
+      "pid": 75224,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 2.4808990807451314,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=1011 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=29949636328 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,9201052087679325706,10660823456791698962,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709933661180833"
+    },
+    {
+      "pid": 76465,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 1.5694685577616452,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=1036 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=30557057486 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,11355401061436582512,1715815893958964458,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709957087227058"
+    },
+    {
+      "pid": 78946,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.8255741906560397,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=29911 --enable-crash-reporter=d2cb34df-5efe-4fd4-b4b5-b322c779bbea, --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=1069 --time-ticks-at-unix-epoch=-1761944054350895 --launch-time-ticks=31697572689 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,5543432137895857271,13193185156579596252,2097152 --field-trial-handle=3,i,15825602819025961133,4151099222252361483,262144 --variations-seed-version=20251031-090148.484000 --trace-process-track-uuid=3190709988009608075"
+    }
+  ],
+  "pausable_services": [
+    {
+      "pid": 750,
+      "name": "avahi-daemon",
+      "username": "avahi",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.038910258985837935,
+      "status": "sleeping",
+      "command": "avahi-daemon: running [ubuntu-VivoBook-ASUSLaptop-X510QA-X510QA.local]"
+    },
+    {
+      "pid": 933,
+      "name": "avahi-daemon",
+      "username": "avahi",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.013639737524926886,
+      "status": "sleeping",
+      "command": "avahi-daemon: chroot helper"
+    },
+    {
+      "pid": 2583,
+      "name": "gsd-a11y-settings",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.06936176601823284,
+      "status": "sleeping",
+      "command": "/usr/libexec/gsd-a11y-settings"
+    },
+    {
+      "pid": 2585,
+      "name": "gsd-color",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.22436839556507637,
+      "status": "sleeping",
+      "command": "/usr/libexec/gsd-color"
+    },
+    {
+      "pid": 2586,
+      "name": "gsd-datetime",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.1150390265668252,
+      "status": "sleeping",
+      "command": "/usr/libexec/gsd-datetime"
+    },
+    {
+      "pid": 2587,
+      "name": "gsd-housekeeping",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.08120401875305308,
+      "status": "sleeping",
+      "command": "/usr/libexec/gsd-housekeeping"
+    },
+    {
+      "pid": 2588,
+      "name": "gsd-keyboard",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.21860587079679328,
+      "status": "sleeping",
+      "command": "/usr/libexec/gsd-keyboard"
+    },
+    {
+      "pid": 2589,
+      "name": "gsd-media-keys",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.2669793585305456,
+      "status": "sleeping",
+      "command": "/usr/libexec/gsd-media-keys"
+    },
+    {
+      "pid": 2594,
+      "name": "gsd-print-notifications",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.1150390265668252,
+      "status": "sleeping",
+      "command": "/usr/libexec/gsd-print-notifications"
+    },
+    {
+      "pid": 2597,
+      "name": "gsd-rfkill",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.07105351640892144,
+      "status": "sleeping",
+      "command": "/usr/libexec/gsd-rfkill"
+    },
+    {
+      "pid": 2599,
+      "name": "gsd-screensaver-proxy",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.06259476445547842,
+      "status": "sleeping",
+      "command": "/usr/libexec/gsd-screensaver-proxy"
+    },
+    {
+      "pid": 2604,
+      "name": "gsd-smartcard",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.07612876758098726,
+      "status": "sleeping",
+      "command": "/usr/libexec/gsd-smartcard"
+    },
+    {
+      "pid": 2607,
+      "name": "gsd-sound",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.09304627148787332,
+      "status": "sleeping",
+      "command": "/usr/libexec/gsd-sound"
+    },
+    {
+      "pid": 2613,
+      "name": "gsd-wacom",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.2210906291831172,
+      "status": "sleeping",
+      "command": "/usr/libexec/gsd-wacom"
+    },
+    {
+      "pid": 2615,
+      "name": "gsd-xsettings",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.23494183550688014,
+      "status": "sleeping",
+      "command": "/usr/libexec/gsd-xsettings"
+    },
+    {
+      "pid": 2616,
+      "name": "snapd-desktop-integration",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.00845875195344303,
+      "status": "sleeping",
+      "command": "/snap/snapd-desktop-integration/315/usr/bin/snapd-desktop-integration"
+    },
+    {
+      "pid": 2637,
+      "name": "gsd-disk-utility-notify",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.07274526679961006,
+      "status": "sleeping",
+      "command": "/usr/libexec/gsd-disk-utility-notify"
+    },
+    {
+      "pid": 2751,
+      "name": "evolution-calendar-factory",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.1471822839899087,
+      "status": "sleeping",
+      "command": "/usr/libexec/evolution-calendar-factory"
+    },
+    {
+      "pid": 2804,
+      "name": "gsd-printer",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.14210703281784287,
+      "status": "sleeping",
+      "command": "/usr/libexec/gsd-printer"
+    },
+    {
+      "pid": 2917,
+      "name": "snapd-desktop-integration",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.16695461668108177,
+      "status": "sleeping",
+      "command": "/snap/snapd-desktop-integration/315/usr/bin/snapd-desktop-integration"
+    },
+    {
+      "pid": 3021,
+      "name": "tracker-miner-fs-3",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.21860587079679328,
+      "status": "sleeping",
+      "command": "/usr/libexec/tracker-miner-fs-3"
+    },
+    {
+      "pid": 11573,
+      "name": "snapd",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.24086296187429027,
+      "status": "sleeping",
+      "command": "/usr/lib/snapd/snapd"
+    },
+    {
+      "pid": 13020,
+      "name": "bluetoothd",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.06767001562754424,
+      "status": "sleeping",
+      "command": "/usr/libexec/bluetooth/bluetoothd"
+    },
+    {
+      "pid": 71339,
+      "name": "cupsd",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.15394928555266313,
+      "status": "sleeping",
+      "command": "/usr/sbin/cupsd -l"
+    },
+    {
+      "pid": 71360,
+      "name": "cups-browsed",
+      "username": "cups-browsed",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.23515330430571624,
+      "status": "sleeping",
+      "command": "/usr/sbin/cups-browsed"
+    }
+  ],
+  "killable_processes": [
+    {
+      "pid": 2,
+      "name": "kthreadd",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 3,
+      "name": "pool_workqueue_release",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 4,
+      "name": "kworker/R-rcu_g",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 5,
+      "name": "kworker/R-rcu_p",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 6,
+      "name": "kworker/R-slub_",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 7,
+      "name": "kworker/R-netns",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 10,
+      "name": "kworker/0:0H-events_highpri",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 12,
+      "name": "kworker/R-mm_pe",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 13,
+      "name": "rcu_tasks_kthread",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 14,
+      "name": "rcu_tasks_rude_kthread",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 15,
+      "name": "rcu_tasks_trace_kthread",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 16,
+      "name": "ksoftirqd/0",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 17,
+      "name": "rcu_preempt",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 18,
+      "name": "migration/0",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 19,
+      "name": "idle_inject/0",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 20,
+      "name": "cpuhp/0",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 21,
+      "name": "cpuhp/2",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 22,
+      "name": "idle_inject/2",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 23,
+      "name": "migration/2",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 24,
+      "name": "ksoftirqd/2",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 26,
+      "name": "kworker/2:0H-events_highpri",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 27,
+      "name": "cpuhp/1",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 28,
+      "name": "idle_inject/1",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 29,
+      "name": "migration/1",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 30,
+      "name": "ksoftirqd/1",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 32,
+      "name": "kworker/1:0H-events_highpri",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 33,
+      "name": "cpuhp/3",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 34,
+      "name": "idle_inject/3",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 35,
+      "name": "migration/3",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 36,
+      "name": "ksoftirqd/3",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 38,
+      "name": "kworker/3:0H-events_highpri",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 39,
+      "name": "kdevtmpfs",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 40,
+      "name": "kworker/R-inet_",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 42,
+      "name": "kauditd",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 43,
+      "name": "khungtaskd",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 44,
+      "name": "oom_reaper",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 46,
+      "name": "kworker/R-write",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 47,
+      "name": "kcompactd0",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 48,
+      "name": "ksmd",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 50,
+      "name": "khugepaged",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 51,
+      "name": "kworker/R-kinte",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 52,
+      "name": "kworker/R-kbloc",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 53,
+      "name": "kworker/R-blkcg",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 54,
+      "name": "irq/9-acpi",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 56,
+      "name": "kworker/R-tpm_d",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 57,
+      "name": "kworker/R-ata_s",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 58,
+      "name": "kworker/R-md",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 59,
+      "name": "kworker/R-md_bi",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 60,
+      "name": "kworker/R-edac-",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 61,
+      "name": "kworker/R-devfr",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 62,
+      "name": "watchdogd",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 63,
+      "name": "kworker/1:1H-kblockd",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 65,
+      "name": "irq/24-AMD-Vi",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 66,
+      "name": "kswapd0",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 67,
+      "name": "ecryptfs-kthread",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 68,
+      "name": "kworker/R-kthro",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 69,
+      "name": "irq/28-pciehp",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 70,
+      "name": "kworker/R-acpi_",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 72,
+      "name": "kworker/R-mld",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 73,
+      "name": "kworker/R-ipv6_",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 75,
+      "name": "kworker/2:1H-kblockd",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 82,
+      "name": "kworker/R-kstrp",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 98,
+      "name": "kworker/R-charg",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 123,
+      "name": "kworker/0:1H-kblockd",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 151,
+      "name": "kworker/3:1H-kblockd",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 155,
+      "name": "irq/29-ELAN1300:00",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 178,
+      "name": "scsi_eh_0",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 180,
+      "name": "kworker/R-scsi_",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 181,
+      "name": "scsi_eh_1",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 182,
+      "name": "kworker/R-scsi_",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 232,
+      "name": "jbd2/sda2-8",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 233,
+      "name": "kworker/R-ext4-",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 459,
+      "name": "kworker/R-asus_",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 600,
+      "name": "kworker/R-crypt",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 617,
+      "name": "kworker/R-cfg80",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 633,
+      "name": "kworker/R-led_w",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 634,
+      "name": "irq/35-iwlwifi",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 745,
+      "name": "accounts-daemon",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.08374164433908599,
+      "status": "sleeping",
+      "command": "/usr/libexec/accounts-daemon"
+    },
+    {
+      "pid": 756,
+      "name": "cron",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.021992755078951876,
+      "status": "sleeping",
+      "command": "/usr/sbin/cron -f -P"
+    },
+    {
+      "pid": 757,
+      "name": "kworker/R-amdgp",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 765,
+      "name": "kworker/R-ttm",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 769,
+      "name": "gnome-remote-desktop-daemon",
+      "username": "gnome-remote-desktop",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.13280240566905555,
+      "status": "sleeping",
+      "command": "/usr/libexec/gnome-remote-desktop-daemon --system"
+    },
+    {
+      "pid": 775,
+      "name": "kworker/R-amdgp",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 776,
+      "name": "kworker/R-amdgp",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 777,
+      "name": "kworker/R-amdgp",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 778,
+      "name": "kworker/R-dm_vb",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 784,
+      "name": "polkitd",
+      "username": "polkitd",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.1306348504809858,
+      "status": "sleeping",
+      "command": "/usr/lib/polkit-1/polkitd --no-debug"
+    },
+    {
+      "pid": 788,
+      "name": "power-profiles-daemon",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.07105351640892144,
+      "status": "sleeping",
+      "command": "/usr/libexec/power-profiles-daemon"
+    },
+    {
+      "pid": 802,
+      "name": "card1-crtc0",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 803,
+      "name": "card1-crtc1",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 804,
+      "name": "card1-crtc2",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 817,
+      "name": "switcheroo-control",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.06936176601823284,
+      "status": "sleeping",
+      "command": "/usr/libexec/switcheroo-control"
+    },
+    {
+      "pid": 840,
+      "name": "udisksd",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.11466895616886208,
+      "status": "sleeping",
+      "command": "/usr/libexec/udisks2/udisksd"
+    },
+    {
+      "pid": 1071,
+      "name": "ModemManager",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.07692177557662255,
+      "status": "sleeping",
+      "command": "/usr/sbin/ModemManager"
+    },
+    {
+      "pid": 1266,
+      "name": "unattended-upgr",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.09304627148787332,
+      "status": "sleeping",
+      "command": "/usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal"
+    },
+    {
+      "pid": 1313,
+      "name": "gdm3",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0862792699251189,
+      "status": "sleeping",
+      "command": "/usr/sbin/gdm3"
+    },
+    {
+      "pid": 1397,
+      "name": "rtkit-daemon",
+      "username": "rtkit",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.03383500781377212,
+      "status": "sleeping",
+      "command": "/usr/libexec/rtkit-daemon"
+    },
+    {
+      "pid": 1479,
+      "name": "krfcommd",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 1552,
+      "name": "colord",
+      "username": "colord",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.08522192593093852,
+      "status": "sleeping",
+      "command": "/usr/libexec/colord"
+    },
+    {
+      "pid": 1594,
+      "name": "kerneloops",
+      "username": "kernoops",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.025693459058583203,
+      "status": "sleeping",
+      "command": "/usr/sbin/kerneloops --test"
+    },
+    {
+      "pid": 1597,
+      "name": "kerneloops",
+      "username": "kernoops",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.02368450546964048,
+      "status": "sleeping",
+      "command": "/usr/sbin/kerneloops"
+    },
+    {
+      "pid": 1623,
+      "name": "upowerd",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.07612876758098726,
+      "status": "sleeping",
+      "command": "/usr/libexec/upowerd"
+    },
+    {
+      "pid": 2003,
+      "name": "gdm-session-worker",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.09198892749369295,
+      "status": "sleeping",
+      "command": "gdm-session-worker [pam/gdm-password]"
+    },
+    {
+      "pid": 2027,
+      "name": "(sd-pam)",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0187149886969927,
+      "status": "sleeping",
+      "command": "(sd-pam)"
+    },
+    {
+      "pid": 2040,
+      "name": "pipewire",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.12392071611794038,
+      "status": "sleeping",
+      "command": "/usr/bin/pipewire"
+    },
+    {
+      "pid": 2041,
+      "name": "pipewire",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.038910258985837935,
+      "status": "sleeping",
+      "command": "/usr/bin/pipewire -c filter-chain.conf"
+    },
+    {
+      "pid": 2047,
+      "name": "wireplumber",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.13026478008302264,
+      "status": "sleeping",
+      "command": "/usr/bin/wireplumber"
+    },
+    {
+      "pid": 2056,
+      "name": "pipewire-pulse",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.14570200239805617,
+      "status": "sleeping",
+      "command": "/usr/bin/pipewire-pulse"
+    },
+    {
+      "pid": 2058,
+      "name": "gnome-keyring-daemon",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.09642977226925054,
+      "status": "sleeping",
+      "command": "/usr/bin/gnome-keyring-daemon --foreground --components=pkcs11,secrets --control-directory=/run/user/1000/keyring"
+    },
+    {
+      "pid": 2098,
+      "name": "xdg-document-portal",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.08289576914374168,
+      "status": "sleeping",
+      "command": "/usr/libexec/xdg-document-portal"
+    },
+    {
+      "pid": 2102,
+      "name": "xdg-permission-store",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.06090301406478982,
+      "status": "sleeping",
+      "command": "/usr/libexec/xdg-permission-store"
+    },
+    {
+      "pid": 2109,
+      "name": "fusermount3",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.018609254297574665,
+      "status": "sleeping",
+      "command": "fusermount3 -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /run/user/1000/doc"
+    },
+    {
+      "pid": 2131,
+      "name": "gdm-x-session",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.06090301406478982,
+      "status": "sleeping",
+      "command": "/usr/libexec/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu /usr/bin/gnome-session --session=ubuntu"
+    },
+    {
+      "pid": 2139,
+      "name": "Xorg",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.5000179748479011,
+      "status": "sleeping",
+      "command": "/usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -nolisten tcp -background none -noreset -keeptty -novtswitch -verbose 3"
+    },
+    {
+      "pid": 2287,
+      "name": "gnome-session-binary",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.14549053359922012,
+      "status": "sleeping",
+      "command": "/usr/libexec/gnome-session-binary --session=ubuntu"
+    },
+    {
+      "pid": 2386,
+      "name": "at-spi-bus-launcher",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0879710203158075,
+      "status": "sleeping",
+      "command": "/usr/libexec/at-spi-bus-launcher"
+    },
+    {
+      "pid": 2413,
+      "name": "gnome-session-ctl",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.055827762892723995,
+      "status": "sleeping",
+      "command": "/usr/libexec/gnome-session-ctl --monitor"
+    },
+    {
+      "pid": 2427,
+      "name": "gvfsd",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.08120401875305308,
+      "status": "sleeping",
+      "command": "/usr/libexec/gvfsd"
+    },
+    {
+      "pid": 2435,
+      "name": "gvfsd-fuse",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.07612876758098726,
+      "status": "sleeping",
+      "command": "/usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f"
+    },
+    {
+      "pid": 2438,
+      "name": "gnome-session-binary",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.16917503906886058,
+      "status": "sleeping",
+      "command": "/usr/libexec/gnome-session-binary --systemd-service --session=ubuntu"
+    },
+    {
+      "pid": 2508,
+      "name": "mutter-x11-frames",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.379850829909301,
+      "status": "sleeping",
+      "command": "/usr/libexec/mutter-x11-frames"
+    },
+    {
+      "pid": 2511,
+      "name": "at-spi2-registryd",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0862792699251189,
+      "status": "sleeping",
+      "command": "/usr/libexec/at-spi2-registryd --use-gnome-session"
+    },
+    {
+      "pid": 2550,
+      "name": "evolution-source-registry",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.16917503906886058,
+      "status": "sleeping",
+      "command": "/usr/libexec/evolution-source-registry"
+    },
+    {
+      "pid": 2564,
+      "name": "gjs",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.21770712840173995,
+      "status": "sleeping",
+      "command": "/usr/bin/gjs -m /usr/share/gnome-shell/org.gnome.Shell.Notifications"
+    },
+    {
+      "pid": 2579,
+      "name": "goa-daemon",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.175942040631615,
+      "status": "sleeping",
+      "command": "/usr/libexec/goa-daemon"
+    },
+    {
+      "pid": 2580,
+      "name": "ibus-daemon",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.11984994174034592,
+      "status": "sleeping",
+      "command": "/usr/bin/ibus-daemon --panel disable --xim"
+    },
+    {
+      "pid": 2592,
+      "name": "gsd-power",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.2733762896953369,
+      "status": "sleeping",
+      "command": "/usr/libexec/gsd-power"
+    },
+    {
+      "pid": 2657,
+      "name": "evolution-alarm-notify",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.3321646157717659,
+      "status": "sleeping",
+      "command": "/usr/libexec/evolution-data-server/evolution-alarm-notify"
+    },
+    {
+      "pid": 2757,
+      "name": "gvfs-udisks2-volume-monitor",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.10150502344131636,
+      "status": "sleeping",
+      "command": "/usr/libexec/gvfs-udisks2-volume-monitor"
+    },
+    {
+      "pid": 2861,
+      "name": "goa-identity-service",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.08289576914374168,
+      "status": "sleeping",
+      "command": "/usr/libexec/goa-identity-service"
+    },
+    {
+      "pid": 2882,
+      "name": "ibus-memconf",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.07443701719029866,
+      "status": "sleeping",
+      "command": "/usr/libexec/ibus-memconf"
+    },
+    {
+      "pid": 2883,
+      "name": "ibus-extension-gtk3",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.2473656274384996,
+      "status": "sleeping",
+      "command": "/usr/libexec/ibus-extension-gtk3"
+    },
+    {
+      "pid": 2887,
+      "name": "ibus-x11",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.22040335558689994,
+      "status": "sleeping",
+      "command": "/usr/libexec/ibus-x11 --kill-daemon"
+    },
+    {
+      "pid": 2893,
+      "name": "ibus-portal",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.07443701719029866,
+      "status": "sleeping",
+      "command": "/usr/libexec/ibus-portal"
+    },
+    {
+      "pid": 2921,
+      "name": "gvfs-afc-volume-monitor",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.06428651484616701,
+      "status": "sleeping",
+      "command": "/usr/libexec/gvfs-afc-volume-monitor"
+    },
+    {
+      "pid": 2945,
+      "name": "evolution-addressbook-factory",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.16409978789679477,
+      "status": "sleeping",
+      "command": "/usr/libexec/evolution-addressbook-factory"
+    },
+    {
+      "pid": 2947,
+      "name": "gvfs-mtp-volume-monitor",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.06767001562754424,
+      "status": "sleeping",
+      "command": "/usr/libexec/gvfs-mtp-volume-monitor"
+    },
+    {
+      "pid": 2958,
+      "name": "gvfs-gphoto2-volume-monitor",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.06597826523685563,
+      "status": "sleeping",
+      "command": "/usr/libexec/gvfs-gphoto2-volume-monitor"
+    },
+    {
+      "pid": 2973,
+      "name": "gvfs-goa-volume-monitor",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.06597826523685563,
+      "status": "sleeping",
+      "command": "/usr/libexec/gvfs-goa-volume-monitor"
+    },
+    {
+      "pid": 2998,
+      "name": "gjs",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.2047017972733213,
+      "status": "sleeping",
+      "command": "/usr/bin/gjs -m /usr/share/gnome-shell/org.gnome.ScreenSaver"
+    },
+    {
+      "pid": 3014,
+      "name": "ibus-engine-simple",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.08120401875305308,
+      "status": "sleeping",
+      "command": "/usr/libexec/ibus-engine-simple"
+    },
+    {
+      "pid": 3117,
+      "name": "xdg-desktop-portal",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.1158849017621695,
+      "status": "sleeping",
+      "command": "/usr/libexec/xdg-desktop-portal"
+    },
+    {
+      "pid": 3121,
+      "name": "dconf-service",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.06936176601823284,
+      "status": "sleeping",
+      "command": "/usr/libexec/dconf-service"
+    },
+    {
+      "pid": 3126,
+      "name": "xdg-desktop-portal-gnome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 1.1637127999949248,
+      "status": "sleeping",
+      "command": "/usr/libexec/xdg-desktop-portal-gnome"
+    },
+    {
+      "pid": 3153,
+      "name": "xdg-desktop-portal-gtk",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.2247913331627485,
+      "status": "sleeping",
+      "command": "/usr/libexec/xdg-desktop-portal-gtk"
+    },
+    {
+      "pid": 3224,
+      "name": "gvfsd-metadata",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.07105351640892144,
+      "status": "sleeping",
+      "command": "/usr/libexec/gvfsd-metadata"
+    },
+    {
+      "pid": 3323,
+      "name": "gnome-calendar",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.30668262551201886,
+      "status": "sleeping",
+      "command": "/usr/bin/gnome-calendar --gapplication-service"
+    },
+    {
+      "pid": 4078,
+      "name": "update-notifier",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.45724841028330476,
+      "status": "sleeping",
+      "command": "/usr/bin/update-notifier"
+    },
+    {
+      "pid": 9751,
+      "name": "wpa_supplicant",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0879710203158075,
+      "status": "sleeping",
+      "command": "/usr/sbin/wpa_supplicant -u -s -O DIR=/run/wpa_supplicant GROUP=netdev"
+    },
+    {
+      "pid": 10088,
+      "name": "psimon",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 10761,
+      "name": "fwupd",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.35595485564082446,
+      "status": "sleeping",
+      "command": "/usr/libexec/fwupd/fwupd"
+    },
+    {
+      "pid": 13468,
+      "name": "nordvpnd",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.8345616146065729,
+      "status": "sleeping",
+      "command": "/usr/sbin/nordvpnd"
+    },
+    {
+      "pid": 13670,
+      "name": "norduserd",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.13534003125508848,
+      "status": "sleeping",
+      "command": "/usr/lib/nordvpn/norduserd"
+    },
+    {
+      "pid": 18036,
+      "name": "rsyslogd",
+      "username": "syslog",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.05413601250203538,
+      "status": "sleeping",
+      "command": "/usr/sbin/rsyslogd -n -iNONE"
+    },
+    {
+      "pid": 22865,
+      "name": "update-manager",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.5851870335791306,
+      "status": "sleeping",
+      "command": "/usr/bin/python3 /usr/bin/update-manager --no-update --no-focus-on-map"
+    },
+    {
+      "pid": 29908,
+      "name": "cat",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.02537625586032909,
+      "status": "sleeping",
+      "command": "cat"
+    },
+    {
+      "pid": 29909,
+      "name": "cat",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.02537625586032909,
+      "status": "sleeping",
+      "command": "cat"
+    },
+    {
+      "pid": 32686,
+      "name": "gvfsd-http",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.10996377539475939,
+      "status": "sleeping",
+      "command": "/usr/libexec/gvfsd-http --spawner :1.25 /org/gtk/gvfs/exec_spaw/1"
+    },
+    {
+      "pid": 33081,
+      "name": "gvfsd-recent",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.10827202500407077,
+      "status": "sleeping",
+      "command": "/usr/libexec/gvfsd-recent --spawner :1.25 /org/gtk/gvfs/exec_spaw/2"
+    },
+    {
+      "pid": 33149,
+      "name": "gvfsd-network",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.10827202500407077,
+      "status": "sleeping",
+      "command": "/usr/libexec/gvfsd-network --spawner :1.25 /org/gtk/gvfs/exec_spaw/3"
+    },
+    {
+      "pid": 33156,
+      "name": "gvfsd-dnssd",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.10658027461338217,
+      "status": "sleeping",
+      "command": "/usr/libexec/gvfsd-dnssd --spawner :1.25 /org/gtk/gvfs/exec_spaw/4"
+    },
+    {
+      "pid": 33337,
+      "name": "gnome-control-center",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.7524059862587574,
+      "status": "sleeping",
+      "command": "/usr/bin/gnome-control-center"
+    },
+    {
+      "pid": 34963,
+      "name": "gnome-text-editor",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 1.2852016249262501,
+      "status": "sleeping",
+      "command": "/usr/bin/gnome-text-editor"
+    },
+    {
+      "pid": 36752,
+      "name": "kworker/1:1-events",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 46244,
+      "name": "kworker/0:0-events",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 50562,
+      "name": "kworker/2:0-events",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 57303,
+      "name": "kworker/3:0-events",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 61553,
+      "name": "psimon",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "sleeping",
+      "command": ""
+    },
+    {
+      "pid": 65059,
+      "name": "kworker/u8:5-gfx",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 67370,
+      "name": "kworker/u9:1-rb_allocator",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 73881,
+      "name": "kworker/u8:0-comp_1.2.1",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 74040,
+      "name": "gjs",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.6587253083743759,
+      "status": "sleeping",
+      "command": "gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app"
+    },
+    {
+      "pid": 74137,
+      "name": "kworker/3:1-events",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 74896,
+      "name": "kworker/u8:3-sdma1",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 74926,
+      "name": "pet",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.035843961402714834,
+      "status": "sleeping",
+      "command": "/home/ubuntu/.vscode/extensions/ms-python.python-2025.16.0-linux-x64/python-env-tools/bin/pet server"
+    },
+    {
+      "pid": 75921,
+      "name": "kworker/0:1",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 76635,
+      "name": "kworker/2:1-cgroup_destroy",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 77971,
+      "name": "kworker/u8:2-events_power_efficient",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 78064,
+      "name": "kworker/1:2-cgroup_destroy",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 78363,
+      "name": "kworker/u9:0-rb_allocator",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 78865,
+      "name": "kworker/u8:4-events_unbound",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 78919,
+      "name": "kworker/1:0",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 79080,
+      "name": "kworker/3:2",
+      "username": "root",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0,
+      "status": "idle",
+      "command": ""
+    },
+    {
+      "pid": 79093,
+      "name": "sudo",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.10002474184946382,
+      "status": "sleeping",
+      "command": "sudo ./step1.sh"
+    },
+    {
+      "pid": 79096,
+      "name": "sudo",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 0.0376943133925305,
+      "status": "sleeping",
+      "command": "sudo ./step1.sh"
+    }
+  ],
+  "high_resource_processes": [
+    {
+      "pid": 29901,
+      "name": "chrome",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 5.186007955456212,
+      "status": "sleeping",
+      "command": "/opt/google/chrome/chrome"
+    },
+    {
+      "pid": 55309,
+      "name": "code",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 5.025450269939922,
+      "status": "sleeping",
+      "command": "/usr/share/code/code --type=zygote"
+    },
+    {
+      "pid": 55549,
+      "name": "code",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 8.521769655496179,
+      "status": "sleeping",
+      "command": "/proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-GB --service-sandbox-type=none --dns-result-order=ipv4first --experimental-network-inspection --inspect-port=0 --crashpad-handler-pid=55235 --enable-crash-reporter=7bb86893-3f7f-4674-a929-fb94b153771d,no_channel --user-data-dir=/home/ubuntu/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,6862771743241887302,11273993744726923585,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,FontationsLinuxSystemFonts,ScreenAIOCREnabled,SpareRendererForSitePerProcess --variations-seed-version"
+    },
+    {
+      "pid": 75216,
+      "name": "code",
+      "username": "ubuntu",
+      "cpu_percent": 0.0,
+      "memory_percent": 8.544449684171349,
+      "status": "sleeping",
+      "command": "/usr/share/code/code /home/ubuntu/.vscode/extensions/ms-python.vscode-pylance-2025.9.1/dist/server.bundle.js --cancellationReceive=file:6837093148a65873fc5ee12faf89475b0b25fb43f0 --node-ipc --clientProcessId=55549"
+    }
+  ],
+  "process_stats": {
+    "essential_count": 51,
+    "pausable_count": 42,
+    "service_count": 25,
+    "killable_count": 185
+  }
+}
