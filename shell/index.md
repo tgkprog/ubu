@@ -45,3 +45,7 @@ Name=Battery Monitor Script
 - Search and find operations
 - Permission management
 - Directory operations
+
+---
+
+[← Back to Home](../)

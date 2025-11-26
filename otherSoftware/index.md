@@ -48,3 +48,7 @@ sudo /opt/splunk/bin/splunk status
 ```
 
 See [splunk.txt](splunk.txt) for detailed configuration and usage instructions.
+
+---
+
+[← Back to Home](../)

@@ -58,3 +58,7 @@ ls -la
 # Show permissions in octal
 stat -c "%a %n" file.txt
 ```
+
+---
+
+[← Back to Home](../)

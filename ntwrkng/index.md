@@ -38,3 +38,7 @@ python3 dnsMskDomainEdit.py --help
 - `l` or `L` - List all configured domains (active and commented)
 
 See [README.md](README.md) for detailed documentation and setup instructions.
+
+---
+
+[← Back to Home](../)

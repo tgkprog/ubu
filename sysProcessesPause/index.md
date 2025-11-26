@@ -91,3 +91,7 @@ python3 sysMon.py
 - `restart_actions.log` - Log of restore operations (chmod 777)
 
 See [README.md](README.md) for detailed documentation.
+
+---
+
+[← Back to Home](../)

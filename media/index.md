@@ -50,3 +50,7 @@ ffmpeg -i input.ts -filter_complex \
 - `setpts/asetpts` - Resets timestamps after cutting
 - `concat` - Joins multiple segments
 - `-crf` - Quality level (lower = better quality, larger file)
+
+---
+
+[← Back to Home](../)
