@@ -13,7 +13,7 @@ This repository contains various scripts and utilities for:
 
 ## Directory Structure
 
-- **`ntwrkng/`** - Network configuration scripts, including DNS and dnsmasq utilities
+- **`ntwrkng/`** - Network configuration scripts, including DNS and dnsmasq utilities (see [lanDns.md](ntwrkng/lanDns.md) for LAN DNS setup guide)
 - **`sysProcessesPause/`** - System process monitoring and resource management tools
 - **`shell/`** - General shell scripts and utilities
 - **`media/`** - Media processing scripts and configurations
