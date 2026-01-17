@@ -1,0 +1,12 @@
+#!/bin/bash
+# cpu_current.sh
+
+echo "Current max limit:"
+cpupower frequency-info | awk -F: '/current policy/ {print $2}'
+
+echo
+echo "Current running speed (per core):"
+grep "MHz" /proc/cpuinfo
+
+sensors | grep "°C"
+

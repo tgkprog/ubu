@@ -1,0 +1,4 @@
+#!/bin/bash
+# cpu_max.sh
+cpupower frequency-info | awk -F: '/hardware limits/ {print $2}'
+

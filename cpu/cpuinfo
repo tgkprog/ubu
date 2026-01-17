@@ -1,0 +1,64 @@
+#!/bin/bash
+# cpu_info.sh
+# Run: bash cpu_info.sh
+
+echo "=== CPU IDENTIFICATION ==="
+lscpu
+
+echo
+echo "=== DETAILED CPU MODEL ==="
+grep -m1 "model name" /proc/cpuinfo
+
+echo
+echo "=== CPU VENDOR ==="
+grep -m1 "vendor_id" /proc/cpuinfo
+
+echo
+echo "=== CPU FLAGS ==="
+grep -m1 "flags" /proc/cpuinfo
+
+echo
+echo "=== CPU FREQUENCY INFO ==="
+if command -v cpupower >/dev/null; then
+  cpupower frequency-info
+else
+  echo "cpupower not installed"
+fi
+
+echo
+echo "=== CURRENT FREQUENCY (per core) ==="
+grep "MHz" /proc/cpuinfo
+
+echo
+echo "=== THERMAL INFO ==="
+if command -v sensors >/dev/null; then
+  sensors
+else
+  echo "Run: sudo apt install lm-sensors && sudo sensors-detect"
+fi
+
+echo
+echo "=== MICROCODE ==="
+dmesg | grep -i microcode | head -n 3
+
+echo
+echo "=== GOVERNOR / P-STATE ==="
+if [ -d /sys/devices/system/cpu/intel_pstate ]; then
+  echo "intel_pstate: enabled"
+  cat /sys/devices/system/cpu/intel_pstate/status 2>/dev/null
+  cat /sys/devices/system/cpu/intel_pstate/no_turbo 2>/dev/null
+elif [ -d /sys/devices/system/cpu/amd_pstate ]; then
+  echo "amd_pstate: enabled"
+  cat /sys/devices/system/cpu/amd_pstate/status 2>/dev/null
+else
+  echo "Using generic cpufreq driver"
+fi
+
+echo
+echo "=== POWER / LAPTOP INFO ==="
+upower -i $(upower -e | grep BAT | head -n1) 2>/dev/null || echo "No battery"
+
+echo
+echo "=== KERNEL ==="
+uname -a
+

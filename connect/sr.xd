@@ -1,0 +1,182 @@
+```text
+README — SSH over TLS (stunnel) server setup
+Ubuntu 24.04
+Domain: r.sel2in.com
+Goal: expose SSH safely over TCP 443 using real TLS
+```
+
+---
+
+## 1. Install (one time)
+
+```bash
+sudo apt update
+sudo apt install -y stunnel4 openssh-server
+```
+
+Ensure SSH is running:
+
+```bash
+systemctl status ssh
+```
+
+---
+
+## 2. Server config (one time)
+
+Create config:
+
+```bash
+sudo nano /etc/stunnel/ssh.conf
+```
+
+Content (minimal, working):
+
+```ini
+pid = /var/run/stunnel-ssh.pid
+foreground = no
+
+[ssh]
+accept = 443
+connect = 127.0.0.1:22
+cert = /etc/letsencrypt/live/r.sel2in.com/fullchain.pem
+key  = /etc/letsencrypt/live/r.sel2in.com/privkey.pem
+```
+
+Permissions:
+
+```bash
+sudo chmod 600 /etc/stunnel/ssh.conf
+```
+
+Firewall:
+
+```bash
+sudo ufw allow 443/tcp
+```
+
+---
+
+## 3. Run manually (test)
+
+```bash
+sudo stunnel /etc/stunnel/ssh.conf
+```
+
+Verify:
+
+```bash
+ss -tulpn | grep :443
+```
+
+Expected:
+
+```
+stunnel
+```
+
+---
+
+## 4. Enable as systemd service (recommended)
+
+### Enable stunnel service
+
+```bash
+sudo sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/stunnel4
+```
+
+Tell stunnel which config to load:
+
+```bash
+echo 'FILES="/etc/stunnel/ssh.conf"' | sudo tee /etc/stunnel/stunnel.conf
+```
+
+Enable + start:
+
+```bash
+sudo systemctl enable stunnel4
+sudo systemctl start stunnel4
+```
+
+Check:
+
+```bash
+systemctl status stunnel4
+ss -tulpn | grep :443
+```
+
+---
+
+## 5. Normal operations
+
+### Start
+
+```bash
+sudo systemctl start stunnel4
+```
+
+### Stop
+
+```bash
+sudo systemctl stop stunnel4
+```
+
+### Restart (after cert renewal)
+
+```bash
+sudo systemctl restart stunnel4
+```
+
+### Logs
+
+```bash
+journalctl -u stunnel4 -n 50
+```
+
+---
+
+## 6. Cert renewal note (important)
+
+If using Let’s Encrypt:
+
+```bash
+sudo systemctl restart stunnel4
+```
+
+(after certbot renew)
+
+---
+
+## 7. Final state (sanity)
+
+```bash
+ss -tulpn | egrep ':(22|443)'
+```
+
+Expected:
+
+* `22` → sshd (local)
+* `443` → stunnel
+
+---
+
+## Why this setup is correct
+
+* Real TLS on 443 (indistinguishable from HTTPS)
+* No HTTP CONNECT parsing
+* No nginx patching
+* Works with strict DPI / corporate proxies
+* Simple, robust, maintainable
+
+---
+
+If you want:
+
+* mutual TLS
+* SNI camouflage
+* run stunnel behind nginx
+* failover ports
+* rate limiting
+
+Say which.
+

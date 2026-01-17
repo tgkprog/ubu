@@ -1,0 +1,1 @@
+tail -f -n 20 /tmp/temp.log

@@ -1,0 +1,3 @@
+#!/bin/bash
+# Calls whyDown3.py with sudo and passes arguments
+sudo python3 /home/ubuntu/code/gt/tgk/ubu/sys/whyDown3.py "$@"

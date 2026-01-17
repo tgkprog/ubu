@@ -1,0 +1,45 @@
+```bash
+# install (client)
+sudo apt update
+sudo apt install -y stunnel4
+```
+
+```bash
+# client config (minimal)
+cat > ~/stunnel-ssh.conf <<'EOF'
+client = yes
+foreground = no
+
+[ssh]
+accept = 127.0.0.1:2222
+connect = r.sel2in.com:443
+EOF
+```
+
+```bash
+# run in background
+nohup stunnel ~/stunnel-ssh.conf >/tmp/stunnel-ssh.log 2>&1 &
+```
+
+```bash
+# connect
+ssh -p 2222 t@127.0.0.1
+```
+
+```bash
+# verify running
+ss -tulpn | grep 2222
+tail -f /tmp/stunnel-ssh.log
+```
+
+```bash
+# stop later
+pkill -f "stunnel.*stunnel-ssh.conf"
+```
+
+Notes:
+
+* No cert verification on client (works with any valid TLS)
+* Uses real TLS on 443
+* No HTTP / CONNECT involved
+

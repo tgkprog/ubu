@@ -1,0 +1,16 @@
+#!/bin/bash
+# cpuset
+# usage: sudo ./cpuset 80
+
+PERCENT="$1"
+[ -z "$PERCENT" ] && { echo "Usage: $0 <percent>"; exit 1; }
+
+MAX_KHZ=$(cat /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq)
+
+TARGET_KHZ=$(( MAX_KHZ * PERCENT / 100 ))
+
+echo "Hardware max : $MAX_KHZ kHz"
+echo "Setting limit: $TARGET_KHZ kHz ($PERCENT%)"
+
+cpupower frequency-set -u ${TARGET_KHZ}kHz
+

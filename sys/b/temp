@@ -1,0 +1,2 @@
+sensors | grep "°"
+python /home/ubuntu/code/gt/tgk/ubu/sys/temperatureWarn.py

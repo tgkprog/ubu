@@ -1,0 +1,3 @@
+#!/bin/bash
+# Calls memTrack.py manually
+sudo python3 /home/ubuntu/code/gt/tgk/ubu/sys/memTrack.py

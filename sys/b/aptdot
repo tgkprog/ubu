@@ -1,0 +1,2 @@
+ sudo dpkg -i $*
+ sudo apt install -fy

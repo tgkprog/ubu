@@ -1,0 +1,156 @@
+1=== CPU IDENTIFICATION ===
+Architecture:                         x86_64
+CPU op-mode(s):                       32-bit, 64-bit
+Address sizes:                        48 bits physical, 48 bits virtual
+Byte Order:                           Little Endian
+CPU(s):                               4
+On-line CPU(s) list:                  0-3
+Vendor ID:                            AuthenticAMD
+BIOS Vendor ID:                       AuthenticAMD
+Model name:                           AMD A12-9720P RADEON R7, 12 COMPUTE CORES 4C+8G
+BIOS Model name:                      AMD A12-9720P RADEON R7, 12 COMPUTE CORES 4C+8G  CPU @ 2.7GHz
+BIOS CPU family:                      72
+CPU family:                           21
+Model:                                101
+Thread(s) per core:                   2
+Core(s) per socket:                   2
+Socket(s):                            1
+Stepping:                             1
+Frequency boost:                      disabled
+CPU(s) scaling MHz:                   66%
+CPU max MHz:                          2700.0000
+CPU min MHz:                          1400.0000
+BogoMIPS:                             5389.90
+Flags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good acc_power nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs xop skinit wdt lwp fma4 tce nodeid_msr tbm topoext perfctr_core perfctr_nb bpext ptsc mwaitx cpb hw_pstate ssbd ibpb vmmcall fsgsbase bmi1 avx2 smep bmi2 xsaveopt arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic vgif overflow_recov
+Virtualization:                       AMD-V
+L1d cache:                            128 KiB (4 instances)
+L1i cache:                            192 KiB (2 instances)
+L2 cache:                             2 MiB (2 instances)
+NUMA node(s):                         1
+NUMA node0 CPU(s):                    0-3
+Vulnerability Gather data sampling:   Not affected
+Vulnerability Itlb multihit:          Not affected
+Vulnerability L1tf:                   Not affected
+Vulnerability Mds:                    Not affected
+Vulnerability Meltdown:               Not affected
+Vulnerability Mmio stale data:        Not affected
+Vulnerability Reg file data sampling: Not affected
+Vulnerability Retbleed:               Mitigation; untrained return thunk; SMT vulnerable
+Vulnerability Spec rstack overflow:   Not affected
+Vulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:             Mitigation; Retpolines; IBPB conditional; STIBP disabled; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected
+Vulnerability Srbds:                  Not affected
+Vulnerability Tsx async abort:        Not affected
+Vulnerability Vmscape:                Not affected
+
+=== DETAILED CPU MODEL ===
+model name	: AMD A12-9720P RADEON R7, 12 COMPUTE CORES 4C+8G
+
+=== CPU VENDOR ===
+vendor_id	: AuthenticAMD
+
+=== CPU FLAGS ===
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good acc_power nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs xop skinit wdt lwp fma4 tce nodeid_msr tbm topoext perfctr_core perfctr_nb bpext ptsc mwaitx cpb hw_pstate ssbd ibpb vmmcall fsgsbase bmi1 avx2 smep bmi2 xsaveopt arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic vgif overflow_recov
+
+=== CPU FREQUENCY INFO ===
+analyzing CPU 0:
+  driver: acpi-cpufreq
+  CPUs which run at the same hardware frequency: 0
+  CPUs which need to have their frequency coordinated by software: 0
+  maximum transition latency: 4.0 us
+  hardware limits: 1.40 GHz - 2.70 GHz
+  available frequency steps:  2.70 GHz, 2.30 GHz, 1.80 GHz, 1.40 GHz
+  available cpufreq governors: conservative ondemand userspace powersave performance schedutil
+  current policy: frequency should be within 1.40 GHz and 1.80 GHz.
+                  The governor "ondemand" may decide which speed to use
+                  within this range.
+  current CPU frequency: 1.80 GHz (asserted by call to hardware)
+  boost state support:
+    Supported: yes
+    Active: yes
+    Boost States: 3
+    Total States: 8
+    Pstate-Pb0: 3700MHz (boost state)
+    Pstate-Pb1: 3200MHz (boost state)
+    Pstate-Pb2: 2900MHz (boost state)
+    Pstate-P0:  2700MHz
+    Pstate-P1:  2300MHz
+    Pstate-P2:  1800MHz
+    Pstate-P3:  1400MHz
+
+=== CURRENT FREQUENCY (per core) ===
+cpu MHz		: 1796.639
+cpu MHz		: 1794.862
+cpu MHz		: 1782.347
+cpu MHz		: 1792.244
+
+=== THERMAL INFO ===
+iwlwifi_1-virtual-0
+Adapter: Virtual device
+temp1:        +42.0°C  
+
+fam15h_power-pci-00c4
+Adapter: PCI adapter
+power1:       74.88 mW (avg =   9.88 mW, interval =   0.01 s)
+                       (crit =  15.00 W)
+
+BAT0-acpi-0
+Adapter: ACPI interface
+in0:          11.55 V  
+
+amdgpu-pci-0008
+Adapter: PCI adapter
+vddgfx:      800.00 mV 
+vddnb:       912.00 mV 
+edge:         +45.0°C  
+
+asus-isa-0000
+Adapter: ISA adapter
+cpu_fan:      600 RPM
+gpu_fan:        0 RPM
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+temp1:        +45.2°C  (high = +70.0°C)
+                       (crit = +100.0°C, hyst = +99.0°C)
+
+acpitz-acpi-0
+Adapter: ACPI interface
+temp1:        +51.0°C  
+
+
+=== MICROCODE ===
+[    0.711552] microcode: Current revision: 0x0600611a
+
+=== GOVERNOR / P-STATE ===
+Using generic cpufreq driver
+
+=== POWER / LAPTOP INFO ===
+  native-path:          BAT0
+  vendor:               ASUSTeK
+  model:                ASUS Battery
+  power supply:         yes
+  updated:              Thursday 25 December 2025 05:31:09 PM (18 seconds ago)
+  has history:          yes
+  has statistics:       yes
+  battery
+    present:             yes
+    rechargeable:        yes
+    state:               fully-charged
+    warning-level:       none
+    energy:              23.019 Wh
+    energy-empty:        0 Wh
+    energy-full:         23.019 Wh
+    energy-full-design:  43.046 Wh
+    energy-rate:         0 W
+    voltage:             11.55 V
+    charge-cycles:       459
+    percentage:          100%
+    capacity:            53.4754%
+    technology:          lithium-ion
+    icon-name:          'battery-full-charged-symbolic'
+
+
+=== KERNEL ===
+Linux ubuntu-VivoBook-ASUSLaptop-X510QA-X510QA 6.8.0-90-generic #91-Ubuntu SMP PREEMPT_DYNAMIC Tue Nov 18 14:14:30 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux

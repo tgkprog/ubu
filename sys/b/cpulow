@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+HIGH=75
+LOW=60
+
+while true; do
+  T=$(sensors | awk '/Tctl|Package/ {gsub(/\+|°C/,"",$2); print int($2); exit}')
+  [ -z "$T" ] && sleep 5 && continue
+
+  if [ "$T" -ge "$HIGH" ]; then
+    cpupower frequency-set -g powersave >/dev/null
+    cpupower frequency-set -u 2000MHz >/dev/null
+  elif [ "$T" -le "$LOW" ]; then
+    cpupower frequency-set -g performance >/dev/null
+    cpupower frequency-set -u 2700MHz >/dev/null
+  fi
+
+  sleep 5
+done

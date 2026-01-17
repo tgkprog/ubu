@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+set -e
+
+echo "=== Host / OS ==="
+hostnamectl
+echo
+
+echo "=== OS Release ==="
+lsb_release -a || cat /etc/os-release
+echo
+
+echo "=== Kernel ==="
+uname -a
+echo
+
+echo "=== CPU ==="
+lscpu
+echo
+
+echo "=== Memory ==="
+free -h
+echo
+
+echo "=== System (DMI) ==="
+sudo dmidecode -t system
+echo
+
+echo "=== Baseboard ==="
+sudo dmidecode -t baseboard
+echo
+
+echo "=== Storage ==="
+lsblk
+echo
+
+echo "=== Hardware Summary ==="
+sudo lshw -short

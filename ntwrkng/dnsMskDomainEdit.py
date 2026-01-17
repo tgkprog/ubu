@@ -3,6 +3,7 @@ import sys
 import os
 
 CONF = "/etc/dnsmasq.d/lan.conf"
+MAIN_CONF = "/etc/dnsmasq.conf"
 
 HELP_TEXT = """ 
 Usage:
@@ -47,7 +48,19 @@ def save_lines(lines):
 
 def list_domains():
     lines = load_lines()
-    if not lines:
+    
+    # Also read main config for listing
+    main_lines = []
+    if os.path.exists(MAIN_CONF):
+        try:
+            with open(MAIN_CONF, "r") as f:
+                main_lines = f.readlines()
+        except:
+            pass
+    
+    all_lines = lines + main_lines
+    
+    if not all_lines:
         print("No domains configured.")
         return
     
@@ -56,7 +69,7 @@ def list_domains():
     active = []
     commented = []
     
-    for line in lines:
+    for line in all_lines:
         line = line.strip()
         if not line or not "address=/" in line:
             continue

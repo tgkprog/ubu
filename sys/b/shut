@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# usage: ./graceful_poweroff.sh <minutes>
+
+p="${1:-0}"
+
+if [ "$p" -lt 3 ]; then
+  p=3
+fi
+
+term_after=$((p - 2))
+
+sleep "$((term_after * 60))"
+
+# ask all user processes to terminate gracefully
+sudo systemctl kill --signal=SIGTERM user.slice
+
+sleep "$((2 * 60))"
+
+# power off system
+sudo systemctl poweroff
