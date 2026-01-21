@@ -1,16 +1,32 @@
 #!/bin/bash
-# cpuset
-# usage: sudo ./cpuset 80
+# cpuset - set CPU frequency to closest available level
+# usage: sudo ./cpuset <percent>
 
 PERCENT="$1"
 [ -z "$PERCENT" ] && { echo "Usage: $0 <percent>"; exit 1; }
 
-MAX_KHZ=$(cat /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq)
+# Get available frequencies (sorted descending)
+AVAILABLE=$(cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies)
+MAX_KHZ=$(echo $AVAILABLE | awk '{print $1}')
 
+# Calculate target frequency
 TARGET_KHZ=$(( MAX_KHZ * PERCENT / 100 ))
 
-echo "Hardware max : $MAX_KHZ kHz"
-echo "Setting limit: $TARGET_KHZ kHz ($PERCENT%)"
+# Find closest available frequency
+CLOSEST=""
+CLOSEST_DIFF=999999999
+for FREQ in $AVAILABLE; do
+    DIFF=$(( TARGET_KHZ - FREQ ))
+    [ $DIFF -lt 0 ] && DIFF=$(( -DIFF ))
+    if [ $DIFF -lt $CLOSEST_DIFF ]; then
+        CLOSEST_DIFF=$DIFF
+        CLOSEST=$FREQ
+    fi
+done
 
-cpupower frequency-set -u ${TARGET_KHZ}kHz
+echo "Hardware max  : $MAX_KHZ kHz"
+echo "Requested     : $TARGET_KHZ kHz ($PERCENT%)"
+echo "Available     : $AVAILABLE"
+echo "Setting to    : $CLOSEST kHz ($(( CLOSEST * 100 / MAX_KHZ ))%)"
 
+cpupower frequency-set -u ${CLOSEST}kHz

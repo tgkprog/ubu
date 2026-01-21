@@ -1,0 +1,50 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import math
+import subprocess
+import time
+
+SAMPLE_RATE = 44100
+DURATION = 0.2  # seconds per beep
+VOLUME = 0.4  # 0.0-1.0
+FREQS = (880.0, 1046.5)  # two cheerful tones
+PAUSE_SECONDS = 0.8
+REPEAT = 4
+
+
+def generate_tone(freq: float, duration: float) -> bytes:
+    total_samples = int(SAMPLE_RATE * duration)
+    max_amplitude = int(32767 * VOLUME)
+    buffer = bytearray()
+    for n in range(total_samples):
+        value = int(max_amplitude * math.sin(2 * math.pi * freq * (n / SAMPLE_RATE)))
+        buffer += value.to_bytes(2, byteorder="little", signed=True)
+    return bytes(buffer)
+
+
+def play_raw_pcm(pcm_bytes: bytes) -> None:
+    subprocess.run(
+        [
+            "aplay",
+            "-q",
+            "-f",
+            "S16_LE",
+            "-r",
+            str(SAMPLE_RATE),
+        ],
+        input=pcm_bytes,
+        check=False,
+    )
+
+
+def main() -> None:
+    tones = [generate_tone(freq, DURATION) for freq in FREQS]
+    for _ in range(REPEAT):
+        play_raw_pcm(tones[0])
+        time.sleep(PAUSE_SECONDS)
+        play_raw_pcm(tones[1])
+
+
+if __name__ == "__main__":
+    main()

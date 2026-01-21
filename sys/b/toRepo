@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SRC_DIR="/b"
+DEST_DIR="/home/ubuntu/code/gt/tgk/ubu/sys/b"
+
+if [ ! -d "$DEST_DIR" ]; then
+  echo "Destination $DEST_DIR does not exist" >&2
+  exit 1
+fi
+
+rsync -a --update --exclude='/.git/' --exclude='*/.git/' "$SRC_DIR"/ "$DEST_DIR"/

@@ -1,0 +1,4 @@
+#!/bin/bash
+# cpu80set - wrapper to set CPU to 80% after delay
+sleep 3
+/b/cpuset 86
