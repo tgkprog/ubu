@@ -13,12 +13,14 @@ from typing import List, Tuple
 
 CONFIG_PATH = Path(__file__).with_name("winMsg.ini")
 DEFAULT_DELAY_SECONDS = 3.0
+DEFAULT_ENTRY_DELAY_SECONDS = 1.0
 
 
 @dataclass
 class TabInfo:
     label: str
     command: str
+    delay_seconds: float
     text_widget: tk.Text
 
 
@@ -44,9 +46,10 @@ def _extract_delay(value: str) -> float | None:
     return None
 
 
-def parse_config(path: Path) -> Tuple[List[Tuple[str, str]], float]:
+def parse_config(path: Path) -> Tuple[List[Tuple[str, str, float]], float]:
     labels: dict[str, str] = {}
     commands: dict[str, str] = {}
+    entry_delays: dict[str, float] = {}
     delay_seconds = DEFAULT_DELAY_SECONDS
 
     if not path.exists():
@@ -69,14 +72,26 @@ def parse_config(path: Path) -> Tuple[List[Tuple[str, str]], float]:
             parsed = _extract_delay(value)
             if parsed is not None:
                 delay_seconds = parsed
+        elif normalized_key.startswith("delay"):
+            idx = normalized_key[5:]
+            if idx and idx.isdigit():
+                parsed = _extract_delay(value)
+                if parsed is not None:
+                    entry_delays[idx] = parsed
 
     def sort_key(token: str) -> Tuple[int, object]:
         return (0, int(token)) if token.isdigit() else (1, token)
 
-    entries: List[Tuple[str, str]] = []
+    raw_entries: List[Tuple[str, str, str, float]] = []
     for idx in sorted(labels.keys(), key=sort_key):
         if idx in commands:
-            entries.append((labels[idx], commands[idx]))
+            delay = entry_delays.get(idx, DEFAULT_ENTRY_DELAY_SECONDS)
+            raw_entries.append((idx, labels[idx], commands[idx], delay))
+
+    raw_entries.sort(key=lambda item: (item[3], sort_key(item[0])))
+    entries: List[Tuple[str, str, float]] = [
+        (label, command, delay) for _, label, command, delay in raw_entries
+    ]
 
     return entries, delay_seconds
 
@@ -116,7 +131,11 @@ def update_text_widget(widget: tk.Text, text: str) -> None:
     widget.configure(state="disabled")
 
 
-def build_command_tabs(root: tk.Tk, entries: List[Tuple[str, str]], delay_seconds: float) -> List[TabInfo]:
+def build_command_tabs(
+    root: tk.Tk,
+    entries: List[Tuple[str, str, float]],
+    delay_seconds: float,
+) -> List[TabInfo]:
     notebook = ttk.Notebook(root)
     notebook.pack(fill="both", expand=True)
 
@@ -126,7 +145,7 @@ def build_command_tabs(root: tk.Tk, entries: List[Tuple[str, str]], delay_second
         f"(Execution starts {delay_seconds:g} seconds after window opens.)"
     )
 
-    for label_text, command in entries:
+    for label_text, command, entry_delay in entries:
         frame = ttk.Frame(notebook)
         notebook.add(frame, text=label_text)
         frame.rowconfigure(0, weight=1)
@@ -136,13 +155,16 @@ def build_command_tabs(root: tk.Tk, entries: List[Tuple[str, str]], delay_second
         scrollbar = ttk.Scrollbar(frame, orient="vertical", command=text_widget.yview)
         text_widget.configure(yscrollcommand=scrollbar.set)
 
-        placeholder = f"Command:\n{command}\n\n{wait_message}"
+        placeholder = (
+            f"Command:\n{command}\n\n{wait_message}\n"
+            f"Per-command delay: {entry_delay:g} seconds"
+        )
         update_text_widget(text_widget, placeholder)
 
         text_widget.grid(row=0, column=0, sticky="nsew")
         scrollbar.grid(row=0, column=1, sticky="ns")
 
-        tab_infos.append(TabInfo(label_text, command, text_widget))
+        tab_infos.append(TabInfo(label_text, command, entry_delay, text_widget))
 
     return tab_infos
 
@@ -166,14 +188,34 @@ def build_fallback_tab(root: tk.Tk, title: str, message: str) -> None:
     scrollbar.grid(row=0, column=1, sticky="ns")
 
 
-def start_background_execution(root: tk.Tk, tab_infos: List[TabInfo], delay_seconds: float) -> None:
-    def worker() -> None:
-        time.sleep(delay_seconds)
-        for info in tab_infos:
-            output = run_command(info.command)
-            root.after(0, update_text_widget, info.text_widget, output)
+def start_background_execution(
+    root: tk.Tk,
+    tab_infos: List[TabInfo],
+    delay_seconds: float,
+) -> None:
+    THREAD_COUNT = 3
 
-    Thread(target=worker, daemon=True).start()
+    def orchestrator() -> None:
+        time.sleep(delay_seconds)
+
+        buckets: List[List[TabInfo]] = [[] for _ in range(THREAD_COUNT)]
+        for idx, info in enumerate(tab_infos):
+            buckets[idx % THREAD_COUNT].append(info)
+
+        def run_bucket(bucket: List[TabInfo]) -> None:
+            accumulated_wait = 0.0
+            for info in bucket:
+                wait_time = max(0.0, info.delay_seconds - accumulated_wait)
+                if wait_time > 0:
+                    time.sleep(wait_time)
+                    accumulated_wait += wait_time
+                output = run_command(info.command)
+                root.after(0, update_text_widget, info.text_widget, output)
+
+        for bucket in buckets:
+            Thread(target=run_bucket, args=(bucket,), daemon=True).start()
+
+    Thread(target=orchestrator, daemon=True).start()
 
 
 def main() -> None:

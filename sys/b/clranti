@@ -1,0 +1,27 @@
+#!/bin/bash 
+echo pkill anti
+pkill antigravity
+
+echo rf ~/.antigravity  ~/.config/antigravity
+# Removes user settings, extensions, and local configuration
+rm -rf ~/.antigravity
+rm -rf ~/.config/antigravity
+
+# Removes cached data
+rm -rf ~/.cache/antigravity
+
+# Removes local brain and conversation history
+rm -rf ~/.gemini/antigravity
+echo pkill chrm
+pkill chrome
+
+echo clr chrm cac
+# Clear only the cache (safe, does not log you out)
+rm -rf ~/.cache/google-chrome/*
+
+# Clear all profile data including login tokens and billing cookies (Warning: Logs you out of everything)
+rm -rf ~/.config/google-chrome/Default/*
+echo sync clr
+sudo sync && sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
+
+

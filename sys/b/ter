@@ -1,0 +1,8 @@
+tmux kill-session -t rme 2>/dev/null
+
+tmux new-session -d -s rme -n a "cd \"$RME/android\" && p1 a"
+tmux new-window  -t rme -n s  "cd \"$RME/server1\" && p1 s"
+tmux new-window  -t rme -n us "cd \"$RME/userWeb\" && p1 us"
+tmux new-window  -t rme -n co "cd \"$RME\" && p1 co"
+tmux new-window  -t rme -n v  "cd \"$RME\" && p1 v"
+tmux new-window  -t rme -n t5 "cd \"$RME\" && p1 t"
