@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+# list startup-related files/links modified in last 30 days
+DAYS=30
+
+paths=(
+  "$HOME/.config/autostart"
+  "$HOME/.config/systemd/user"
+  "$HOME/.local/share/systemd/user"
+  "$HOME/.profile"
+  "$HOME/.bash_profile"
+  "$HOME/.bash_login"
+  "$HOME/.bashrc"
+  "$HOME/.xprofile"
+  "$HOME/.xsessionrc"
+  "/etc/xdg/autostart"
+  "/etc/systemd/system"
+  "/etc/systemd/user"
+)
+
+echo "=== Files modified in last $DAYS days ==="
+for p in "${paths[@]}"; do
+  [ -e "$p" ] || continue
+  find "$p" -maxdepth 2 -mtime -$DAYS -ls 2>/dev/null
+done
+
+echo
+echo "=== Symlinks modified in last $DAYS days ==="
+for p in "${paths[@]}"; do
+  [ -e "$p" ] || continue
+  find "$p" -maxdepth 2 -type l -mtime -$DAYS -ls 2>/dev/null
+done
+
+echo
+echo "=== User systemd units enabled recently (timestamps) ==="
+systemctl --user list-unit-files --state=enabled
+
+echo
+echo "=== User crontab (@reboot) ==="
+crontab -l 2>/dev/null | grep -n "@reboot" || true
+

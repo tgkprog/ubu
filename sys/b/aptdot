@@ -1,2 +1,15 @@
+#!/bin/bash
+if [ "$1" = "/?" ]; then echo "aptdot <.deb files> - Install .deb packages with dependency fix"; exit 0; fi
+if [ "$1" = "/help" ]; then
+  echo "aptdot - Debian package installer with auto-fix"
+  echo ""
+  echo "Usage: aptdot <.deb file> [.deb file2 ...]"
+  echo ""
+  echo "Installs .deb packages using dpkg and fixes dependencies."
+  echo "Runs 'dpkg -i' on specified packages."
+  echo "Then runs 'apt install -fy' to resolve any dependency issues."
+  exit 0
+fi
+
  sudo dpkg -i $*
  sudo apt install -fy

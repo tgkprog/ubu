@@ -1,4 +1,16 @@
 #!/usr/bin/env bash
+if [ "$1" = "/?" ]; then echo "toRepo - Sync /b to repository directory"; exit 0; fi
+if [ "$1" = "/help" ]; then
+  echo "toRepo - Directory synchronization utility"
+  echo ""
+  echo "Usage: toRepo"
+  echo ""
+  echo "Syncs contents of /b to ~/code/gt/tgk/ubu/sys/b."
+  echo "Uses rsync with --update to preserve newer files."
+  echo "Excludes .git directories from sync."
+  exit 0
+fi
+
 set -euo pipefail
 
 SRC_DIR="/b"

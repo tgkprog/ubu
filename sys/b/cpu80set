@@ -1,4 +1,15 @@
 #!/bin/bash
+if [ "$1" = "/?" ]; then echo "cpu80set - Set CPU to ~80% after 3 second delay"; exit 0; fi
+if [ "$1" = "/help" ]; then
+  echo "cpu80set - CPU frequency setter with delay"
+  echo ""
+  echo "Usage: cpu80set"
+  echo ""
+  echo "Waits 3 seconds then sets CPU frequency to 86% of maximum."
+  echo "Wrapper around cpuset utility for convenient 80% setting."
+  exit 0
+fi
+
 # cpu80set - wrapper to set CPU to 80% after delay
 sleep 3
 /b/cpuset 86

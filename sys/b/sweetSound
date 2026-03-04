@@ -1,6 +1,22 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import sys
+
+if len(sys.argv) > 1 and sys.argv[1] in ("/?", "/help"):
+    if sys.argv[1] == "/?":
+        print("sweetSound - Play completion sound and show notification")
+        sys.exit(0)
+    print("sweetSound - Task completion notifier")
+    print("")
+    print("Usage: sweetSound")
+    print("")
+    print("Triggers 'Done' notification and plays cheerful dual-tone sequence.")
+    print("Plays 880Hz and 1046.5Hz tones, repeated 4 times.")
+    print("Also calls winMsg2.py to display window notification.")
+    print("Requires aplay (ALSA) for audio playback.")
+    sys.exit(0)
+
 import math
 import subprocess
 import time

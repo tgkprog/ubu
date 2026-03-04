@@ -1,4 +1,18 @@
-#!/bin/bash 
+#!/bin/bash
+if [ "$1" = "/?" ]; then echo "clranti - Clean antigravity and chrome cache/data"; exit 0; fi
+if [ "$1" = "/help" ]; then
+  echo "clranti - Antigravity and Chrome cleaner"
+  echo ""
+  echo "Usage: clranti"
+  echo ""
+  echo "Kills antigravity and chrome processes."
+  echo "Removes all antigravity config, cache, and data."
+  echo "Clears Chrome cache and profile data (logs you out)."
+  echo "Performs system cache drop (drop_caches)."
+  echo "WARNING: Removes login tokens and browser sessions."
+  exit 0
+fi
+
 echo pkill anti
 pkill antigravity
 

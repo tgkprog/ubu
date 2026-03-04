@@ -1,0 +1,3 @@
+sudo without password
+test vps1, t7 connection
+code build

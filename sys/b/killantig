@@ -1,4 +1,15 @@
 #!/usr/bin/env bash
+if [ "$1" = "/?" ]; then echo "killantig - Kill antigravity and language_server processes"; exit 0; fi
+if [ "$1" = "/help" ]; then
+  echo "killantig - Process terminator for specific patterns"
+  echo ""
+  echo "Usage: killantig"
+  echo ""
+  echo "Terminates processes matching 'antigravity' and 'language_server'."
+  echo "Sends SIGTERM first, waits 15 seconds, then sends SIGKILL."
+  echo "Ensures clean shutdown before forcing termination."
+  exit 0
+fi
 
 patterns=("antigravity" "language_server")
 signals=("TERM" "KILL")

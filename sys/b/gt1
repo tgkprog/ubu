@@ -1,0 +1,22 @@
+#!/bin/bash
+if [ "$1" = "/?" ]; then echo "gt1 - Git pull and push with SSH agent setup"; exit 0; fi
+if [ "$1" = "/help" ]; then
+  echo "gt1 - Git sync utility"
+  echo ""
+  echo "Usage: gt1"
+  echo ""
+  echo "Sets up SSH agent with tgk1 key."
+  echo "Performs git pull to get latest changes."
+  echo "Then performs git push to send local commits."
+  exit 0
+fi
+
+ eval $(ssh-agent -s)
+
+ ssh-add ~/.ssh/tgk1
+
+ git pull
+ git push
+
+
+

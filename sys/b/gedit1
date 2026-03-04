@@ -1,1 +1,13 @@
+#!/bin/bash
+if [ "$1" = "/?" ]; then echo "gedit1 - Launch gedit in background"; exit 0; fi
+if [ "$1" = "/help" ]; then
+  echo "gedit1 - Text editor launcher"
+  echo ""
+  echo "Usage: gedit1"
+  echo ""
+  echo "Launches gedit text editor in background (nohup mode)."
+  echo "Output is suppressed. Process runs independently of terminal."
+  exit 0
+fi
+
 nohup gedit >/dev/null 2>&1 &

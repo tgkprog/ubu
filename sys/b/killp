@@ -8,6 +8,27 @@ def usage() -> None:
     sys.exit(1)
 
 
+def show_help() -> None:
+    print("killp - Kill processes by pattern")
+    print("")
+    print("Usage: killp <pattern> [signal]")
+    print("")
+    print("Searches for processes containing <pattern> and kills them.")
+    print("Default signal is TERM (graceful termination).")
+    print("Signal can be specified with or without '-' prefix.")
+    print("")
+    print("Examples:")
+    print("  killp firefox          # Kill all firefox processes")
+    print("  killp python KILL      # Force kill all python processes")
+    sys.exit(0)
+
+
+if len(sys.argv) >= 2 and sys.argv[1] in ("/?", "/help"):
+    if sys.argv[1] == "/?":
+        print("killp <pattern> [signal] - Kill processes by name pattern")
+        sys.exit(0)
+    show_help()
+
 if len(sys.argv) < 2:
     usage()
 

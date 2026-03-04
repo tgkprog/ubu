@@ -1,4 +1,16 @@
 #!/usr/bin/env bash
+if [ "$1" = "/?" ]; then echo "cpulow - Auto CPU frequency based on temperature"; exit 0; fi
+if [ "$1" = "/help" ]; then
+  echo "cpulow - Temperature-based CPU frequency manager"
+  echo ""
+  echo "Usage: cpulow"
+  echo ""
+  echo "Monitors CPU temperature and adjusts frequency automatically."
+  echo "High threshold: 75°C -> switches to powersave at 2000MHz"
+  echo "Low threshold: 60°C -> switches to performance at 2700MHz"
+  echo "Runs continuously, checking every 5 seconds."
+  exit 0
+fi
 
 HIGH=75
 LOW=60

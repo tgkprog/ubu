@@ -1,3 +1,16 @@
+#!/bin/bash
+if [ "$1" = "/?" ]; then echo "cpunorm - Set CPU to normal/balanced performance mode"; exit 0; fi
+if [ "$1" = "/help" ]; then
+  echo "cpunorm - CPU normal mode setter"
+  echo ""
+  echo "Usage: cpunorm"
+  echo ""
+  echo "Sets CPU to balanced/normal performance mode."
+  echo "Enables performance governor, CPU boost, and balanced profile."
+  echo "Good for general usage with balance of performance and power."
+  exit 0
+fi
+
 sudo cpupower frequency-set -g performance
 echo 1 | sudo tee /sys/devices/system/cpu/cpufreq/boost
 echo balanced | sudo tee /sys/firmware/acpi/platform_profile

@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# Create destination directory if it doesn't exist
+mkdir -p sys/b
+
+# Initialize counters
+copied=0
+skipped_size=0
+skipped_folders=0
+
+echo "Copying files smaller than 1MB from /b to sys/b..."
+echo "=============================================="
+
+# Process files up to 2 levels deep
+while IFS= read -r -d '' file; do
+    size=$(stat -c%s "$file")
+    if [ $size -lt 1048576 ]; then
+        echo "Copying: $file ($(numfmt --to=iec-i --suffix=B $size))"
+        cp --parents "$file" sys/b 2>/dev/null
+        ((copied++))
+    else
+        echo "Skipped (too large): $file ($(numfmt --to=iec-i --suffix=B $size))"
+        ((skipped_size++))
+    fi
+done < <(find /b -maxdepth 2 -type f -print0)
+
+# Count level 3 folders that were skipped
+while IFS= read -r -d '' dir; do
+    ((skipped_folders++))
+done < <(find /b -mindepth 3 -maxdepth 3 -type d -print0)
+
+# Adjust paths by removing /b prefix
+cd sys/b
+if [ -d "b" ]; then
+    mv b/* . 2>/dev/null
+    rmdir b 2>/dev/null
+fi
+
+echo "=============================================="
+echo "Summary:"
+echo "  Total copied: $copied"
+echo "  Total skipped (size >= 1MB): $skipped_size"
+echo "  Total folders skipped at level 3: $skipped_folders"

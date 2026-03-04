@@ -1,0 +1,59 @@
+#!/bin/bash
+
+if [ "$EUID" -ne 0 ]; then
+  echo "Run with sudo: sudo bash migrate_to_k.sh newuser"
+  exit 1
+fi
+
+NEWUSER=$1
+OLDUSER=${SUDO_USER:-$USER}
+
+if [ -z "$NEWUSER" ]; then
+  echo "Usage: sudo bash migrate_to_k.sh newuser"
+  exit 1
+fi
+
+OLDHOME="/home/$OLDUSER"
+NEWHOME="/home/$NEWUSER"
+
+if [ ! -d "$OLDHOME" ] || [ ! -d "$NEWHOME" ]; then
+  echo "Home directory not found."
+  exit 1
+fi
+
+echo "Migrating from $OLDUSER to $NEWUSER"
+
+# Files
+for f in .bashrc .profile .bash_aliases .bash_logout .inputrc .zshrc .zprofile .gitconfig .git-credentials; do
+  [ -f "$OLDHOME/$f" ] && cp "$OLDHOME/$f" "$NEWHOME/"
+done
+
+# SSH
+if [ -d "$OLDHOME/.ssh" ]; then
+  cp -r "$OLDHOME/.ssh" "$NEWHOME/"
+  chmod 700 "$NEWHOME/.ssh"
+  chmod 600 "$NEWHOME/.ssh/"* 2>/dev/null
+fi
+
+# Dev folders
+for d in .m2 .gradle .npm .nvm .aws .kube; do
+  [ -d "$OLDHOME/$d" ] && cp -r "$OLDHOME/$d" "$NEWHOME/"
+done
+
+
+
+# Cron
+crontab -u "$OLDUSER" -l > /tmp/cron_migrate 2>/dev/null
+if [ -s /tmp/cron_migrate ]; then
+  crontab -u "$NEWUSER" /tmp/cron_migrate
+fi
+rm -f /tmp/cron_migrate
+
+# Docker group
+usermod -aG docker "$NEWUSER"
+
+# Fix ownership
+chown -R "$NEWUSER:$NEWUSER" "$NEWHOME"
+
+echo "Done. Logout and login as $NEWUSER."
+

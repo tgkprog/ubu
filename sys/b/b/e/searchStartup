@@ -1,0 +1,40 @@
+#!/bin/bash
+
+SEARCH="winMsg"
+USER_HOME="$HOME"
+
+echo "===== User autostart locations ====="
+
+grep -Rni --color=always "$SEARCH" \
+"$USER_HOME/.config/autostart" \
+"$USER_HOME/.config/systemd/user" \
+"$USER_HOME/.profile" \
+"$USER_HOME/.bash_profile" \
+"$USER_HOME/.bash_login" \
+"$USER_HOME/.bashrc" \
+"$USER_HOME/.xprofile" \
+"$USER_HOME/.xsession" \
+"$USER_HOME/.xsessionrc" \
+"$USER_HOME/.config/plasma-workspace/env" \
+"$USER_HOME/.config/lxsession" 2>/dev/null
+
+echo
+echo "===== User crontab (@reboot) ====="
+crontab -l 2>/dev/null | grep -ni --color=always "$SEARCH"
+
+echo
+echo "===== System autostart locations (may need sudo) ====="
+
+sudo grep -Rni --color=always "$SEARCH" \
+/etc/xdg/autostart \
+/etc/systemd/user \
+/etc/profile \
+/etc/profile.d \
+/etc/bash.bashrc \
+/etc/environment \
+/etc/X11/Xsession \
+/etc/gdm3 \
+/etc/lightdm \
+/etc/crontab \
+/etc/rc.local 2>/dev/null
+

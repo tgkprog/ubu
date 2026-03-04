@@ -1,2 +1,14 @@
+#!/bin/bash
+if [ "$1" = "/?" ]; then echo "temp - Display temperature sensors and run warning monitor"; exit 0; fi
+if [ "$1" = "/help" ]; then
+  echo "temp - Temperature monitoring utility"
+  echo ""
+  echo "Usage: temp"
+  echo ""
+  echo "Displays current system temperatures and runs temperature warning monitor."
+  echo "Shows all temperature sensors with degree symbols."
+  exit 0
+fi
+
 sensors | grep "°"
 python /home/ubuntu/code/gt/tgk/ubu/sys/temperatureWarn.py

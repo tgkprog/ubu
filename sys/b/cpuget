@@ -1,4 +1,17 @@
 #!/bin/bash
+if [ "$1" = "/?" ]; then echo "cpuget - Display current CPU frequency and temperature"; exit 0; fi
+if [ "$1" = "/help" ]; then
+  echo "cpuget - CPU status information"
+  echo ""
+  echo "Usage: cpuget"
+  echo ""
+  echo "Displays current CPU information:"
+  echo "  - Current frequency policy/limit"
+  echo "  - Per-core running speeds"
+  echo "  - Temperature readings"
+  exit 0
+fi
+
 # cpu_current.sh
 
 echo "Current max limit:"

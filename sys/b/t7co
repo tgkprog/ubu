@@ -1,1 +1,12 @@
+#!/bin/bash
+if [ "$1" = "/?" ]; then echo "t7co - SSH to t7@sel2in.com"; exit 0; fi
+if [ "$1" = "/help" ]; then
+  echo "t7co - SSH connection to remote server"
+  echo ""
+  echo "Usage: t7co"
+  echo ""
+  echo "Establishes SSH connection to t7@sel2in.com using tgk1 key."
+  exit 0
+fi
+
  ssh -i ~/.ssh/tgk1 t7@sel2in.com

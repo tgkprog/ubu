@@ -1,3 +1,20 @@
+#!/bin/bash
+if [ "$1" = "/?" ]; then echo "ter - Setup tmux session for RME project"; exit 0; fi
+if [ "$1" = "/help" ]; then
+  echo "ter - Tmux RME session creator"
+  echo ""
+  echo "Usage: ter"
+  echo ""
+  echo "Creates tmux session 'rme' with multiple windows:"
+  echo "  a  - Android project"
+  echo "  s  - Server1"
+  echo "  us - UserWeb"
+  echo "  co - Copilot"
+  echo "  v  - (other)"
+  echo "  t5 - Test/Terminal"
+  exit 0
+fi
+
 tmux kill-session -t rme 2>/dev/null
 
 tmux new-session -d -s rme -n a "cd \"$RME/android\" && p1 a"

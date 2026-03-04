@@ -1,4 +1,17 @@
 #!/bin/bash
+if [ "$1" = "/?" ]; then echo "dns - Enable local dnsmasq DNS server"; exit 0; fi
+if [ "$1" = "/help" ]; then
+  echo "dns - DNS configuration switcher"
+  echo ""
+  echo "Usage: dns"
+  echo ""
+  echo "Disables systemd-resolved and enables dnsmasq."
+  echo "Sets nameserver to 127.0.0.1 for local DNS."
+  echo "Tests configuration with dig and ping."
+  echo "Requires sudo privileges."
+  exit 0
+fi
+
 echo "Enabling local dnsmasq DNS..."
 
 sudo systemctl stop systemd-resolved

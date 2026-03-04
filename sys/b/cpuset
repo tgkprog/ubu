@@ -1,4 +1,19 @@
 #!/bin/bash
+if [ "$1" = "/?" ]; then echo "cpuset <percent> - Set CPU frequency to percentage of max"; exit 0; fi
+if [ "$1" = "/help" ]; then
+  echo "cpuset - CPU frequency setter"
+  echo ""
+  echo "Usage: sudo cpuset <percent>"
+  echo ""
+  echo "Sets CPU frequency to specified percentage of maximum."
+  echo "Finds closest available frequency to target percentage."
+  echo "Displays hardware max, requested target, and actual setting."
+  echo "Requires sudo privileges to modify CPU frequency."
+  echo ""
+  echo "Example: sudo cpuset 80   # Set CPU to 80% of max frequency"
+  exit 0
+fi
+
 # cpuset - set CPU frequency to closest available level
 # usage: sudo ./cpuset <percent>
 

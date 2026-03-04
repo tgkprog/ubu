@@ -21,7 +21,7 @@ class TabInfo:
     label: str
     command: str
     delay_seconds: float
-    text_widget: tk.Text
+    text_widget: "WinMsg"
 
 
 def configure_window(root: tk.Tk) -> None:

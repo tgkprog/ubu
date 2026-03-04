@@ -1,3 +1,15 @@
 #!/bin/bash
+if [ "$1" = "/?" ]; then echo "whyd3 - System downtime analysis (version 3)"; exit 0; fi
+if [ "$1" = "/help" ]; then
+  echo "whyd3 - System downtime analyzer (version 3)"
+  echo ""
+  echo "Usage: whyd3 [args]"
+  echo ""
+  echo "Analyzes system downtime and shutdown causes."
+  echo "Runs whyDown3.py with sudo privileges."
+  echo "All arguments are passed to the Python script."
+  exit 0
+fi
+
 # Calls whyDown3.py with sudo and passes arguments
 sudo python3 /home/ubuntu/code/gt/tgk/ubu/sys/whyDown3.py "$@"

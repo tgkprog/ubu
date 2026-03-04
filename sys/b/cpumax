@@ -1,4 +1,15 @@
 #!/bin/bash
+if [ "$1" = "/?" ]; then echo "cpumax - Display CPU hardware frequency limits"; exit 0; fi
+if [ "$1" = "/help" ]; then
+  echo "cpumax - CPU hardware limits information"
+  echo ""
+  echo "Usage: cpumax"
+  echo ""
+  echo "Displays the hardware frequency limits of the CPU."
+  echo "Shows minimum and maximum frequencies supported by processor."
+  exit 0
+fi
+
 # cpu_max.sh
 cpupower frequency-info | awk -F: '/hardware limits/ {print $2}'
 

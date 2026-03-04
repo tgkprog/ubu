@@ -1,1 +1,13 @@
+#!/bin/bash
+if [ "$1" = "/?" ]; then echo "wtemp - Watch temperature log file"; exit 0; fi
+if [ "$1" = "/help" ]; then
+  echo "wtemp - Temperature log monitor"
+  echo ""
+  echo "Usage: wtemp"
+  echo ""
+  echo "Continuously monitors the temperature log file (/tmp/temp.log)."
+  echo "Shows last 20 lines and follows new entries in real-time."
+  exit 0
+fi
+
 tail -f -n 20 /tmp/temp.log

@@ -1,1 +1,44 @@
-sudo python3 /home/ubuntu/code/gt/tgk/ubu/sys/whyDown.py $*
+#!/bin/bash
+if [ "$1" = "/?" ]; then echo "whyd - System shutdown/downtime analysis"; exit 0; fi
+if [ "$1" = "/help" ]; then
+  echo "whyd - System downtime analyzer"
+  echo ""
+  echo "Usage: whyd [args]"
+  echo "       whyd p   - Search from specific date"
+  echo ""
+  echo "Analyzes why system was down or shutdown."
+  echo "Runs whyDown.py script with sudo privileges."
+  echo "All arguments are passed through to the Python script."
+  exit 0
+fi
+
+if [ "$1" = "p" ]; then
+  # Get current date components
+  current_month=$(date +%m)
+  current_year=$(date +%y)
+  
+  # Ask for date
+  echo "Enter date to start looking for events (dd-mm-yy format):"
+  echo "If mm or yy missing, current month and year will be used."
+  read -r user_date
+  
+  # Parse the date
+  IFS='-' read -ra date_parts <<< "$user_date"
+  day="${date_parts[0]}"
+  month="${date_parts[1]:-$current_month}"
+  year="${date_parts[2]:-$current_year}"
+  
+  # Format date as YYYY-MM-DD for Python script
+  full_year="20$year"
+  formatted_date="$full_year-$month-$day"
+  
+  # Ask for minutes
+  echo "How many minutes to search from that date? (default: 30)"
+  read -r minutes
+  minutes="${minutes:-30}"
+  
+  # Call Python script with date and minutes
+  sudo python3 /home/ubuntu/code/gt/tgk/ubu/sys/whyDown.py "$formatted_date" "$minutes"
+else
+  sudo python3 /home/ubuntu/code/gt/tgk/ubu/sys/whyDown.py $*
+fi

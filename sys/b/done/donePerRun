@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+extra_data_dirs="/b/done"
+if [[ -n "${XDG_DATA_DIRS:-}" ]]; then
+  extra_data_dirs="$extra_data_dirs:$XDG_DATA_DIRS"
+else
+  extra_data_dirs="$extra_data_dirs:/usr/local/share:/usr/share"
+fi
+
+desktop_file="/usr/share/applications/donePersistentNotify.desktop"
+
+desktop_file="/b/done/donePersistentNotify.desktop"
+
+if command -v gio >/dev/null 2>&1; then
+  exec gio launch "$desktop_file" "$@"
+elif command -v gtk-launch >/dev/null 2>&1; then
+  desktop_id="${desktop_file##*/}"
+  desktop_id="${desktop_id%.desktop}"
+  XDG_DATA_DIRS="$extra_data_dirs" exec gtk-launch "$desktop_id" "$@"
+else
+  exec xdg-open "$desktop_file" "$@"
+fi

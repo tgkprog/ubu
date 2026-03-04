@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# usage: ./graceful_poweroff.sh <minutes>
+# usage: graceful poweroff after <minutes> minimum 3
 
 p="${1:-0}"
 

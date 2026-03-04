@@ -1,3 +1,15 @@
 #!/bin/bash
+if [ "$1" = "/?" ]; then echo "checkt - Check system time and synchronization"; exit 0; fi
+if [ "$1" = "/help" ]; then
+  echo "checkt - System time checker"
+  echo ""
+  echo "Usage: checkt [args]"
+  echo ""
+  echo "Checks system time and synchronization status."
+  echo "Runs checkTime.py with sudo privileges."
+  echo "Arguments are passed to the Python script."
+  exit 0
+fi
+
 # Calls checkTime.py with sudo and passes arguments
 sudo python3 /home/ubuntu/code/gt/tgk/ubu/sys/checkTime.py "$@"

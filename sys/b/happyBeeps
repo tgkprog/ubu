@@ -1,6 +1,22 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import sys
+
+if len(sys.argv) > 1 and sys.argv[1] in ("/?", "/help"):
+    if sys.argv[1] == "/?":
+        print("happyBeeps - Play happy ascending tone sequence")
+        sys.exit(0)
+    print("happyBeeps - Audio notification utility")
+    print("")
+    print("Usage: happyBeeps")
+    print("")
+    print("Plays a pleasant ascending 3-tone sequence.")
+    print("Uses frequencies: 784Hz, 988Hz, 1318.5Hz")
+    print("Duration: 0.15 seconds per beep at 45% volume")
+    print("Requires aplay (ALSA) for audio playback.")
+    sys.exit(0)
+
 import math
 import subprocess
 import time

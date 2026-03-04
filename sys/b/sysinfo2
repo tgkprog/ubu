@@ -1,4 +1,18 @@
 #!/usr/bin/env bash
+if [ "$1" = "/?" ]; then echo "sysinfo2 - Display comprehensive system information"; exit 0; fi
+if [ "$1" = "/help" ]; then
+  echo "sysinfo2 - System information reporter"
+  echo ""
+  echo "Usage: sysinfo2"
+  echo ""
+  echo "Displays comprehensive system information including:"
+  echo "  - Host/OS details - Kernel version - CPU info"
+  echo "  - Memory status - DMI system info - Baseboard info"
+  echo "  - Storage devices - Hardware summary"
+  echo "Requires sudo for some DMI information."
+  exit 0
+fi
+
 set -e
 
 echo "=== Host / OS ==="

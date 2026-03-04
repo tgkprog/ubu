@@ -46,13 +46,20 @@ class PersistentNotifyWindow:
         self.running = True
         
         # Create main window
-        self.root = tk.Tk()
+        ##self.root = tk.Tk()
+        self.root = tk.Tk(className='PersistentNotifyTgkprog')
         self.root.title("Notification")
-        self.root.geometry("500x200")
+        self.root.geometry("500x400")
         self.root.resizable(False, False)
-        
+        self.app_icon = tk.PhotoImage(file='/usr/local/share/winMsg/images/blue.png')
+        self.root.iconphoto(True, self.app_icon)
+
+       
         # Withdraw window immediately to prevent flashing
         self.root.withdraw()
+        
+        # Update to get actual window dimensions
+        self.root.update_idletasks()
         
         # Center window on screen (while withdrawn)
         self.center_window()
@@ -123,9 +130,8 @@ class PersistentNotifyWindow:
     
     def center_window(self):
         """Center window on screen"""
-        self.root.update_idletasks()
-        width = self.root.winfo_width()
-        height = self.root.winfo_height()
+        width = 500
+        height = 400
         x = (self.root.winfo_screenwidth() // 2) - (width // 2)
         y = (self.root.winfo_screenheight() // 2) - (height // 2)
         self.root.geometry(f'{width}x{height}+{x}+{y}')

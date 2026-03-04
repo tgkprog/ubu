@@ -1,1 +1,12 @@
+#!/bin/bash
+if [ "$1" = "/?" ]; then echo "vps1 - SSH to VPS at 38.242.235.170"; exit 0; fi
+if [ "$1" = "/help" ]; then
+  echo "vps1 - VPS SSH connection"
+  echo ""
+  echo "Usage: vps1"
+  echo ""
+  echo "Connects to VPS server at 38.242.235.170 using k1 SSH key."
+  exit 0
+fi
+
 ssh -i ~/.ssh/k1 t@38.242.235.170 

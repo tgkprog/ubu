@@ -1,0 +1,27 @@
+#!/bin/bash
+if [ "$1" = "/?" ]; then echo "cpu100set - Set CPU to maximum performance (100%)"; exit 0; fi
+if [ "$1" = "/help" ]; then
+  echo "cpu100set - Maximum CPU performance setter"
+  echo ""
+  echo "Usage: cpu100set"
+  echo ""
+  echo "Sets CPU to maximum performance mode (100% frequency)."
+  echo "Uses performance governor and sets upper limit to max hardware frequency."
+  echo "Non-persistent (resets on reboot)."
+  echo "Requires sudo privileges."
+  exit 0
+fi
+
+# cpu100set - set CPU scaling to maximum performance (100% frequency)
+# non-sticky (resets on reboot)
+
+echo "Setting CPU to maximum performance (100%)..."
+
+# Get max frequency from hardware
+MAX_KHZ=$(cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies | awk '{print $1}')
+
+# Set the governor to performance (this usually forces max freq)
+# And set the upper frequency limit just in case
+sudo cpupower frequency-set -g performance -u ${MAX_KHZ}kHz
+
+echo "Successfully set to performance governor with max limit ${MAX_KHZ}kHz."

@@ -1,3 +1,15 @@
 #!/bin/bash
+if [ "$1" = "/?" ]; then echo "whyd2 - System downtime analysis (version 2)"; exit 0; fi
+if [ "$1" = "/help" ]; then
+  echo "whyd2 - System downtime analyzer (version 2)"
+  echo ""
+  echo "Usage: whyd2 [args]"
+  echo ""
+  echo "Analyzes system downtime and shutdown causes."
+  echo "Runs whyDown2.py with sudo privileges."
+  echo "Arguments are passed to the Python script."
+  exit 0
+fi
+
 # Calls whyDown2.py with sudo and passes arguments
 sudo python3 /home/ubuntu/code/gt/tgk/ubu/sys/whyDown2.py "$@"

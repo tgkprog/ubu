@@ -1,0 +1,2 @@
+CONTAINER ID   IMAGE             COMMAND                  CREATED        STATUS        PORTS                                         NAMES
+a8836769c6d2   mariadb:10.6.19   "docker-entrypoint.s…"   2 months ago   Up 13 hours   0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp   mariadb_local

@@ -1,0 +1,13 @@
+echo sudo apt update
+
+sudo apt update
+
+
+
+sudo apt upgrade -y
+
+
+echo 'sudo apt update'
+
+echo 'sudo apt upgrade -y'
+

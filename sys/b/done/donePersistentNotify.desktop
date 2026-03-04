@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Persistent Notify
+Comment=Persistent notification window
+Exec=/b/donePersistentNotify.py %F
+Icon=/usr/local/share/window-runner/images/i2.png
+Terminal=false
+Categories=Utility;

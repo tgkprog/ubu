@@ -1,1 +1,12 @@
+#!/bin/bash
+if [ "$1" = "/?" ]; then echo "path - Run whyd script with sudo"; exit 0; fi
+if [ "$1" = "/help" ]; then
+  echo "path - Whyd wrapper script"
+  echo ""
+  echo "Usage: path"
+  echo ""
+  echo "Runs /b/whyd script with sudo privileges."
+  exit 0
+fi
+
  sudo bash /b/whyd

@@ -1,2 +1,13 @@
 #!/bin/bash
+if [ "$1" = "/?" ]; then echo "topm - Memory management monitor"; exit 0; fi
+if [ "$1" = "/help" ]; then
+  echo "topm - Memory manager/monitor"
+  echo ""
+  echo "Usage: topm"
+  echo ""
+  echo "Runs memory management utility (meman.py)."
+  echo "Monitors and manages system memory usage."
+  exit 0
+fi
+
 python3 /home/ubuntu/code/gt/tgk/ubu/sys/meman.py
