@@ -12,4 +12,4 @@ if [ "$1" = "/help" ]; then
 fi
 
 # Calls whyDown2.py with sudo and passes arguments
-sudo python3 /home/ubuntu/code/gt/tgk/ubu/sys/whyDown2.py "$@"
+sudo python3 /data/code/gt/tgk/ubu/sys/whyDown2.py "$@"

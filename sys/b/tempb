@@ -1,1 +1,11 @@
-nohup python ~/code/gt/tgk/ubu/sys/temperatureWarn.py >/dev/null 2>&1 &
+#!/bin/bash
+if [ "$1" = "/?" ]; then
+  echo "tempb - Run temperature monitor in background"
+  echo "Usage: tempb"
+  echo "Starts temperature warning monitor as background process."
+  echo "Logs to: /tmp/temp.log"
+  echo "Use 'wtemp' to watch the log in real-time."
+  exit 0
+fi
+
+nohup python /data/code/gt/tgk/ubu/sys/temperatureWarn.py >/dev/null 2>&1 &

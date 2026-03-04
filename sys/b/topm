@@ -10,4 +10,4 @@ if [ "$1" = "/help" ]; then
   exit 0
 fi
 
-python3 /home/ubuntu/code/gt/tgk/ubu/sys/meman.py
+python3 /data/code/gt/tgk/ubu/sys/meman.py

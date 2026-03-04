@@ -38,7 +38,7 @@ if [ "$1" = "p" ]; then
   minutes="${minutes:-30}"
   
   # Call Python script with date and minutes
-  sudo python3 /home/ubuntu/code/gt/tgk/ubu/sys/whyDown.py "$formatted_date" "$minutes"
+  sudo python3 /data/code/gt/tgk/ubu/sys/whyDown.py "$formatted_date" "$minutes"
 else
-  sudo python3 /home/ubuntu/code/gt/tgk/ubu/sys/whyDown.py $*
+  sudo python3 /data/code/gt/tgk/ubu/sys/whyDown.py $*
 fi

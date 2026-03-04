@@ -15,8 +15,15 @@ echo "=============================================="
 while IFS= read -r -d '' file; do
     size=$(stat -c%s "$file")
     if [ $size -lt 1048576 ]; then
+        # Get relative path by removing /b/ prefix
+        rel_path="${file#/b/}"
+        dest="sys/b/$rel_path"
+        
+        # Create parent directory if needed
+        mkdir -p "$(dirname "$dest")"
+        
         echo "Copying: $file ($(numfmt --to=iec-i --suffix=B $size))"
-        cp --parents "$file" sys/b 2>/dev/null
+        cp "$file" "$dest" 2>/dev/null
         ((copied++))
     else
         echo "Skipped (too large): $file ($(numfmt --to=iec-i --suffix=B $size))"
@@ -28,13 +35,6 @@ done < <(find /b -maxdepth 2 -type f -print0)
 while IFS= read -r -d '' dir; do
     ((skipped_folders++))
 done < <(find /b -mindepth 3 -maxdepth 3 -type d -print0)
-
-# Adjust paths by removing /b prefix
-cd sys/b
-if [ -d "b" ]; then
-    mv b/* . 2>/dev/null
-    rmdir b 2>/dev/null
-fi
 
 echo "=============================================="
 echo "Summary:"

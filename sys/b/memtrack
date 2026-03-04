@@ -11,4 +11,4 @@ if [ "$1" = "/help" ]; then
 fi
 
 # Calls memTrack.py manually
-sudo python3 /home/ubuntu/code/gt/tgk/ubu/sys/memTrack.py
+sudo python3 /data/code/gt/tgk/ubu/sys/memTrack.py

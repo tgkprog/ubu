@@ -5,7 +5,7 @@ if [ "$1" = "/help" ]; then
   echo ""
   echo "Usage: toRepo"
   echo ""
-  echo "Syncs contents of /b to ~/code/gt/tgk/ubu/sys/b."
+  echo "Syncs contents of /b to /data/code/gt/tgk/ubu/sys/b."
   echo "Uses rsync with --update to preserve newer files."
   echo "Excludes .git directories from sync."
   exit 0
@@ -14,7 +14,7 @@ fi
 set -euo pipefail
 
 SRC_DIR="/b"
-DEST_DIR="/home/ubuntu/code/gt/tgk/ubu/sys/b"
+DEST_DIR="/data/code/gt/tgk/ubu/sys/b"
 
 if [ ! -d "$DEST_DIR" ]; then
   echo "Destination $DEST_DIR does not exist" >&2
