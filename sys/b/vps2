@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ssh -i ~/.ssh/k1 t@3.75.203.160 
+# high8--p5wd

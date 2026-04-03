@@ -14,7 +14,11 @@ fi
  eval $(ssh-agent -s)
 
  ssh-add ~/.ssh/tgk1
-
+echo ""
+echo "e v a l dlr (ssh-agent -s)"
+echo "ssh-add ~/.ssh/tgk1"
+echo "ctrl -c if do not want git push pull now..."
+sleep 3
  git pull
  git push
 

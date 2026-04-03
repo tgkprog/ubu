@@ -1,0 +1,2 @@
+openssl rsa -noout -modulus -in $c | openssl md5
+

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#dns
+ping -c 1 sel2in.com
+ping -c 1 r2b.sel2in.com
+cd $REACHME_HOME/clientWeb
+p1  clnt
+./run.sh

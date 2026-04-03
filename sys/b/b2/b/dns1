@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "Restoring normal DNS (systemd-resolved)..."
+
+sudo systemctl stop dnsmasq
+sudo systemctl disable dnsmasq
+
+sudo systemctl enable systemd-resolved
+sudo systemctl start systemd-resolved
+
+sudo rm -f /etc/resolv.conf
+sudo ln -s /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+
+echo "Normal DNS restored."
+systemd-resolve --status | grep 'DNS Servers'
+

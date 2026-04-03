@@ -10,3 +10,4 @@ if [ "$1" = "/help" ]; then
 fi
 
 ssh -i ~/.ssh/k1 t@38.242.235.170 
+# high8--p5wd

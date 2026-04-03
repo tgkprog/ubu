@@ -1,97 +1,79 @@
-# System Scripts Backup (sys/b)
+# /b/ Utilities
 
-**Last Updated:** 2026-03-04
+**aptdot** - Installs .deb packages with automatic dependency fixing.
 
-This directory contains a backup of system utility scripts from `/b`, limited to files smaller than 1MB and up to 2 directory levels deep.
+**checkt** - Checks system time and synchronization status.
 
-## Purpose
+**clranti** - Cleans antigravity and Chrome cache/data, kills processes.
 
-This backup is created by the `../saveGit` script to preserve essential system utilities in the git repository while excluding large files.
+**co1** - Launches GitHub Copilot CLI with all tools enabled.
 
-## Scripts Overview
+**cpu100set** - Sets CPU to maximum performance mode (100% frequency).
 
-### CPU Management
-- `cpu100set` - Set CPU to 100% performance mode
-- `cpu80set` - Set CPU to 80% mode
-- `cpuget` - Get current CPU settings
-- `cpulow` - Set CPU to low power mode
-- `cpumax` - Set CPU to maximum performance
-- `cpunorm` - Set CPU to normal mode
-- `cpuset` - General CPU configuration script
+**cpu80set** - Sets CPU to 86% frequency after 3-second delay.
 
-### System Monitoring
-- `temp` - Check system temperature
-- `tempb` - Temperature monitoring (brief)
-- `wtemp` - Watch temperature continuously
-- `memtrack` - Memory tracking utility
-- `topm` - Top memory consumers
-- `sysinfo2` - System information display
-- `whyd`, `whyd2`, `whyd3` - System downtime/crash investigation tools
+**cpuget** - Displays current CPU frequency and temperature readings.
 
-### Process Management
-- `killp` - Kill processes utility
-- `killantig` - Kill antivirus processes
-- `clranti` - Clear antivirus processes
+**cpulow** - Auto-adjusts CPU frequency based on temperature thresholds.
 
-### Notifications & UI
-- `winMsg`, `winMsg.py`, `winMsg2.py` - Window message display utilities
-- `winMsg.ini` - Configuration for window messages
-- `winMsg.md` - Documentation for window messaging
-- `showWin`, `showWin.py` - Show window utilities
-- `donePersistentNotify.py` - Persistent notification system
-- `happyBeeps`, `happyBeeps.ps1` - Audio notification scripts
-- `sweetSound` - Sound notification utility
+**cpumax** - Displays CPU hardware frequency limits.
 
-### Network & Connectivity
-- `dns` - DNS management
-- `vps1` - VPS connection script
+**cpunorm** - Sets CPU to balanced/normal performance mode.
 
-### Editors & Terminals
-- `gedit1` - Launch gedit
-- `ter` - Terminal launcher
-- `gt1` - Git terminal
-- `co1` - Console utility
-- `t7co` - Terminal 7 console
+**cpuset** - Sets CPU frequency to specified percentage of maximum.
 
-### System Operations
-- `shut` - Shutdown utility
-- `updt` - Update system
-- `checkt` - System check
-- `aptdot` - APT operations
-- `path` - Path management
-- `toRepo` - Navigate to repository
+**dns** - Enables local dnsmasq DNS server, disables systemd-resolved.
 
-### Resources
-- `rme.odt` - Documentation file
-- `res/` - Resources directory
-- `done/` - Completed tasks
-- `e/` - Additional scripts directory
-- `b/` - Nested backup directory
-- `b2/` - Secondary backup directory
+**donePersistentNotify.py** - Persistent notification window with periodic sound alerts.
 
-## Usage
+**gedit1** - Launches gedit text editor in background.
 
-These scripts are backed up copies. To use them:
-1. Ensure they have execute permissions: `chmod +x scriptname`
-2. Run directly: `./scriptname`
-3. Or copy to a location in your PATH
+**gt1** - Git pull/push utility with SSH agent setup.
 
-## Updating This Backup
+**happyBeeps** - Plays pleasant ascending 3-tone sequence notification.
 
-Run the parent saveGit script:
-```bash
-cd /data/code/gt/tgk/ubu/sys
-./saveGit
-```
+**killantig** - Terminates antigravity and language_server processes gracefully.
 
-This will copy all files < 1MB from `/b` to this directory, showing:
-- Files being copied with sizes
-- Files skipped due to size
-- Folders skipped at level 3+
+**killp** - Kills processes matching specified name pattern.
 
-## Notes
+**memtrack** - Tracks and monitors system memory usage.
 
-- Only files smaller than 1MB are included
-- Maximum directory depth: 2 levels
-- Level 3+ directories are excluded to keep backup manageable
-- Original location: `/b`
+**path** - Runs whyd script with sudo privileges.
+
+**showWin** - Displays small GTK alert window with custom message.
+
+**shut** - Graceful system poweroff after specified minutes (minimum 3).
+
+**sweet** - Task completion notifier with sound and window notification.
+
+**sysinfo2** - Displays comprehensive system information and hardware details.
+
+**t7co** - SSH connection to t7@sel2in.com using tgk1 key.
+
+**temp** - Temperature monitoring utility with configurable warning thresholds.
+
+**tempb** - Runs temperature monitor as background process.
+
+**ter** - Creates tmux session for RME project with multiple windows.
+
+**toRepo** - Syncs /b directory to repository location using rsync.
+
+**topm** - Memory management monitor utility.
+
+**updt** - System package update utility (apt update/upgrade).
+
+**vps1** - SSH connection to VPS at 38.242.235.170.
+
+**vps2** - SSH connection to VPS at 3.75.203.160.
+
+**whyd** - Analyzes system downtime and shutdown causes.
+
+**whyd2** - System downtime analyzer (version 2).
+
+**whyd3** - System downtime analyzer (version 3).
+
+**winMsg** - Multi-tab command executor with configurable delays.
+
+**winMsg2.py** - GTK attention monitor window with blinking dock icon.
+
+**wtemp** - Watches temperature log file in real-time.

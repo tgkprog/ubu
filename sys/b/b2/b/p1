@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# prmt.sh — set terminal title to the first argument
+# Usage: ./prmt.sh "My Title"
+
+title="${1:-}"
+if [ -z "$title" ]; then
+  echo "Usage: $0 \"title\""
+  exit 1
+fi
+
+# Use ANSI OSC sequence to set the terminal window/title
+# This works in most terminal emulators (xterm-compatible, gnome-terminal, etc.)
+printf '\033]0;%s\007' "$title"

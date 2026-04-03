@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#dns1
+echo "dns1 if no dns"
+ping -c 4 sel2in.com
+cd $REACHME_HOME/server1
+p1 srvr
+./run.sh

@@ -1,20 +1,28 @@
 #!/bin/bash
 if [ "$1" = "/?" ]; then
   echo "temp - Display temperature sensors and run warning monitor"
-  echo "Usage: temp"
-  echo "Shows current system temperatures and runs temperature warning monitor."
+  echo "Usage: temp [scan_interval] [warn_threshold] [critical_threshold]"
+  echo "  scan_interval: Seconds between scans (default: 15)"
+  echo "  warn_threshold: Warning temperature in °C (default: 73)"
+  echo "  critical_threshold: Critical temperature in °C (default: 78)"
+  echo "Prints edge temp and highest C temp every 1 minute."
   echo "Logs to: /tmp/temp.log"
   exit 0
 fi
 if [ "$1" = "/help" ]; then
   echo "temp - Temperature monitoring utility"
   echo ""
-  echo "Usage: temp"
+  echo "Usage: temp [scan_interval] [warn_threshold] [critical_threshold]"
   echo ""
+  echo "Parameters:"
+  echo "  scan_interval: Seconds between temperature scans (default: 15)"
+  echo "  warn_threshold: Warning temperature threshold in °C (default: 73)"
+  echo "  critical_threshold: Critical temperature threshold in °C (default: 78)"
+  echo ""
+  echo "Prints edge temp and highest C temp every 1 minute."
   echo "Displays current system temperatures and runs temperature warning monitor."
-  echo "Shows all temperature sensors with degree symbols."
   exit 0
 fi
 
 sensors | grep "°"
-python /data/code/gt/tgk/ubu/sys/temperatureWarn.py
+python /data/code/gt/tgk/ubu/sys/temperatureWarn.py "$@"
